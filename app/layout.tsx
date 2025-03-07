@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Alegreya, Tilt_Warp} from "next/font/google";
+import NavLink from "@/app/UI/nav_links"
 
 import "./globals.css";
+
 
 const alegreyaSerif = Alegreya({
   variable: "--font-alegreya-serif",
@@ -25,6 +27,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <meta name="description" content="Portfolio of Nathan Heaton, an Interactive Digital Art & Design student at SETU Carlow. Showcasing UX/UI design, web development, and digital art projects."></meta>
+        <meta name="keywords" content="Nathan Heaton, UX design, UI design, web development, digital art, interactive design, SETU Carlow, usability testing, front-end development"></meta>
+        <meta name="author" content="Nathan Heaton"></meta>
+        <meta name="robots" content="index, follow"></meta>
+        <meta property="og:title" content="Nathan Heaton | UX & Web Portfolio"></meta>
+        <meta property="og:description" content="Explore my UX/UI projects, web development work, and digital art portfolio."></meta>
+        <meta property="og:image" content="https://nathanheaton.github.io/Web-User-Interface-Design/assets/img/codeprojects-showcase.png"></meta>
+        <meta property="og:url" content="https://nathanheaton.github.io/Web-User-Interface-Design/index.html"></meta>
       <body
         className={`${alegreyaSerif.variable} ${tiltWarp.variable} antialiased`}
       >
@@ -33,16 +44,8 @@ export default function RootLayout({
                 <a href="index.html" ></a>
                 <button id="hamburger" ></button>
                 <h1 > Nathan H</h1>             
-                <nav >
-                    <div >
-                        <a href="index.html">Home</a>
-
-                        <a href="codeProjects.html">Code Projects</a>
-                        <a href="artProjects.html">Art Projects</a>
-                        <a href="misc.html">Other Work</a>
-                        <a href="contact.html">Contact</a>
-                        <a href="cv.html">CV</a>
-                    </div>
+                <nav>
+                  <NavLink />
                 </nav>
             </section>
         </header>
