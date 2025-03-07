@@ -17,7 +17,7 @@ const Links = [
     ]
 
 
-export default function NavLink()
+export default function FooterLink()
 {
 
     const userPath = usePathname();
@@ -28,8 +28,8 @@ export default function NavLink()
                 <Link
                 key={link.name}
                 href={link.href}
-                className={clsx("flex p-4 font-normal text-xl",
-                {"text-[#0066cc]" : userPath === link.href})}
+                className={clsx("flex justify center md: p-4 font-normal text-xl",
+                {"color-#0066cc" : userPath === link.href})}
                 >
                     {link.name}
                 </Link>

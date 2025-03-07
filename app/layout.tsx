@@ -3,7 +3,8 @@ import { Alegreya, Tilt_Warp} from "next/font/google";
 import NavLink from "@/app/UI/nav_links"
 
 import "./globals.css";
-
+import FooterLink from "./UI/footer_links";
+import Image from "next/image";
 
 const alegreyaSerif = Alegreya({
   variable: "--font-alegreya-serif",
@@ -36,41 +37,37 @@ export default function RootLayout({
         <meta property="og:description" content="Explore my UX/UI projects, web development work, and digital art portfolio."></meta>
         <meta property="og:image" content="https://nathanheaton.github.io/Web-User-Interface-Design/assets/img/codeprojects-showcase.png"></meta>
         <meta property="og:url" content="https://nathanheaton.github.io/Web-User-Interface-Design/index.html"></meta>
-      <body
-        className={`${alegreyaSerif.variable} ${tiltWarp.variable} antialiased`}
-      >
-        <header id="nav-area">
+
+        <link rel="icon" href="/public/icons/logo.png" type="image/x-icon"/>
+        <title>Nathan Heaton Portfolio</title>
+      <body className={`${alegreyaSerif.variable} ${tiltWarp.variable} antialiased`}>
+        <header className="flex h-25 w-full bg-[#69de90]" >
             <section id="nav-content">
-                <a href="index.html" ></a>
                 <button id="hamburger" ></button>
-                <h1 > Nathan H</h1>             
-                <nav>
+                <h1 className="text-lg flex justify-center my-2"> Nathan H</h1> 
+                <Image src="/icons/logo.png" alt="N logo" width={113 *.5} height={118*.5} ></Image>            
+                <nav className="flex justify-center align-center pl-30 my-5">
                   <NavLink />
                 </nav>
             </section>
         </header>
         {children}
 
-        <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+        <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center bg-[#0c0c0c]">
         <section >
                 <div >
-                    <a href="index.html">Home</a>
-                    <a href="codeProjects.html">Code Projects</a>
-                    <a href="artProjects.html">Art Projects</a>
-                    <a href="misc.html">Other Work</a>
-                    <a href="contact.html" >Contact</a>
-                    <a href="cv.html">CV</a>
+                  <FooterLink />
 
                 </div>
                 <div >
                     <div id="social" >
-                        <a href="https://www.linkedin.com/in/nathan-heaton-478541300/" target="_blank">
+                        <a href="/public/icons/Linkin_icon.svg" target="_blank">
                             
                         </a>
                     </div>
 
                     <div id="social" >
-                        <a href="https://github.com/NathanHeaton" target="_blank">
+                        <a href="/public/icons/8725846_github_alt_icon.svg" target="_blank">
                             
                         </a>
                     </div>
