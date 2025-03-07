@@ -13,6 +13,11 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@theme {
+  --color-energygreen: #69de90;
+  --color-darkgrey:#0c0c0c;
+}
+
 
 @media (prefers-color-scheme: dark) {
   :root {
