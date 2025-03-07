@@ -41,12 +41,12 @@ export default function RootLayout({
         <link rel="icon" href="/public/icons/logo.png" type="image/x-icon"/>
         <title>Nathan Heaton Portfolio</title>
       <body className={`${alegreyaSerif.variable} ${tiltWarp.variable} antialiased`}>
-        <header className="flex h-25 w-full bg-[#69de90]" >
+        <header className="flex align-center h-25 w-full bg-[#69de90] " >
             <section id="nav-content">
                 <button id="hamburger" ></button>
-                <h1 className="text-lg flex justify-center my-2"> Nathan H</h1> 
+                <h1 className="text-[48px] my-2"> Nathan H</h1> 
                 <Image src="/icons/logo.png" alt="N logo" width={113 *.5} height={118*.5} ></Image>            
-                <nav className="flex justify-center align-center pl-30 my-5">
+                <nav className="flex justify-end my-5">
                   <NavLink />
                 </nav>
             </section>

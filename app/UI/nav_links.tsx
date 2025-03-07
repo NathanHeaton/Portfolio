@@ -28,8 +28,8 @@ export default function NavLink()
                 <Link
                 key={link.name}
                 href={link.href}
-                className={clsx("flex p-4 font-normal text-xl",
-                {"text-[#0066cc]" : userPath === link.href})}
+                className={clsx("flex text-[#FFF] duration-300 ease-in-out p-1 m-3 font-normal text-[24px] border-b-4 border-white hover:px-3 hover:mx-1 hover:border-[#0066cc]",
+                {"border-[#0066cc]" : userPath === link.href})}
                 >
                     {link.name}
                 </Link>
