@@ -19,8 +19,15 @@ const Links = [
 
 export default function NavLink()
 {
+    const userPath = removeExtension()
 
-    const userPath = usePathname();
+    function removeExtension() // gets rid off stuff after the first backslash from the user path
+    {
+        let userPath = usePathname();
+        let array = userPath.split("/");
+        return ("/" + array[1]);
+    }
+
     return(
         <>
         {Links.map((link) => {
@@ -28,8 +35,11 @@ export default function NavLink()
                 <Link
                 key={link.name}
                 href={link.href}
-                className={clsx("flex text-[#FFF] duration-300 ease-in-out p-1 m-3 font-normal text-[24px] border-b-4 border-white hover:px-3 hover:mx-1 hover:border-[#0066cc]",
-                {"border-[#0066cc]" : userPath === link.href})}
+                className={clsx("flex duration-300 ease-in-out p-1 m-3 font-normal text-[24px] border-b-4  hover:px-3 hover:mx-1 hover:border-highlightblue hover:text-highlightblue",
+                userPath === link.href
+                ? "text-highlightblue border-highlightblue"
+                : "text-[#FFF] border-white "
+                )}
                 >
                     {link.name}
                 </Link>

@@ -8,10 +8,10 @@ export default function CodeLayout({
   }>) {
     return (
         
-<div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 ">
+<div className="flex row flex-wrap items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 ">
 
 
-    <section className="flex justify-center flex-wrap my-50 w-full md:max-w-200 md:w-3/5">
+    <section className="flex justify-center flex-wrap pt-25 w-full md:max-w-200 md:w-3/5">
         <h1 className="text-l py-5">Programming and UX/UI portfolio</h1>
         <p>Here is all of my programming and design work, showcasing my technical skills and focus on user
              experience. I developed games using C++ and SFML in my first year of IDAD and another game in
@@ -23,7 +23,7 @@ export default function CodeLayout({
         <CodeNav></CodeNav>
     </nav>
 
-    <main className="w-full max-w-400px md:w-5/6">
+    <main className="w-full flex justify-center max-w-400px md:w-5/6">
         {children}
     </main>
 

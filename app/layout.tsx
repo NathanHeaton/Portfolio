@@ -42,20 +42,21 @@ export default function RootLayout({
 
         <link rel="icon" href="/public/icons/logo.png" type="image/x-icon"/>
       <body className={`${alegreyaSerif.variable} ${tiltWarp.variable} antialiased`}>
-        <header className="flex align-center h-25 w-full bg-energygreen " >
-            <section id="nav-content">
-                <button id="hamburger" ></button>
-                <h1 className="text-[48px] my-2"> Nathan H</h1> 
-                <div className="m-2 sm:block hidden">
-                <Image src="/icons/logo.png" alt="N logo" width={113 *.5} height={118*.5} ></Image>    
-                </div>        
-                <nav className="justify-end my-5 md:flex hidden">
-                  <NavLink />
-                </nav>
-            </section>
+        <header className="flex justify-between align-center h-25 w-full bg-energygreen " >
+          <section className="flex align-center row-auto 2xl:ml-50 ml-10">
+            <div className="m-2 mt-7.5 sm:block hidden scale-80 2xl:scale-100">
+              <Image src="/icons/logo.png" alt="N logo" width={113 * .9} height={118 *.9} ></Image>    
+            </div>    
+            <h1 className="text-xl 2xl:text-[48px] my-3"> Nathan H</h1> 
+           </section>    
+
+            <nav className="justify-end my-5 mr-10 xl:flex hidden 2xl:mr-20">
+              <button id="hamburger" ></button>
+              <NavLink />
+            </nav>
+   
         </header>
         {children}
-
         <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center bg-darkgrey">
         <section >
                 <div >
