@@ -19,12 +19,14 @@ export default function CodeLayout({
                using HTML, CSS, and JavaScript. Throughout these projects, I combined coding with UX
              research and UI design to create user-friendly, accessible interfaces that enhance usability.</p>
     </section>
-    <nav className="bg-darkgrey p-3 max-w-400 w-full flex flex-wrap">
+    <nav className="bg-darkgrey p-3 max-w-600 w-full flex flex-wrap">
         <CodeNav></CodeNav>
     </nav>
 
     <main className="w-full flex justify-center max-w-400px md:w-5/6">
+    <section className="flex row flex-wrap w-full max-w-400">
         {children}
+    </section>
     </main>
 
 </div>

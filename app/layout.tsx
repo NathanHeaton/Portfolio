@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Alegreya, Tilt_Warp} from "next/font/google";
 import NavLink from "@/app/UI/nav_links"
+import Link from "next/link";
 
 import "./globals.css";
 import FooterLink from "./UI/footer_links";
@@ -30,6 +31,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  function toggleNav(){
+
+  }
   return (
     <html lang="en">
         <meta name="description" content="Portfolio of Nathan Heaton, an Interactive Digital Art & Design student at SETU Carlow. Showcasing UX/UI design, web development, and digital art projects."></meta>
@@ -49,36 +54,30 @@ export default function RootLayout({
             </div>    
             <h1 className="text-xl 2xl:text-[48px] my-3"> Nathan H</h1> 
            </section>    
-
+           <div className="xl:hidden absolute p-2 t-4 right-2" onClick={toggleNav()} ><Image src="/icons/Hamburger.png" alt="|||" width={50} height={50} /></div>
             <nav className="justify-end my-5 mr-10 xl:flex hidden 2xl:mr-20">
-              <button id="hamburger" ></button>
+
               <NavLink />
             </nav>
    
         </header>
         {children}
-        <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center bg-darkgrey">
-        <section >
-                <div >
+        <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center mt-20 bg-darkgrey">
+        <section>
+                <div className="md:flex row-auto p-10">
                   <FooterLink />
-
                 </div>
-                <div >
-                    <div id="social" >
-                        <a href="/public/icons/Linkin_icon.svg" target="_blank">
-                            
-                        </a>
-                    </div>
-
-                    <div id="social" >
-                        <a href="/public/icons/8725846_github_alt_icon.svg" target="_blank">
-                            
-                        </a>
-                    </div>
+                <div className="flex row gap-5">
+                    <Link href={"https://www.linkedin.com/in/nathan-heaton-478541300/"} target="_blank">
+                      <Image src="/icons/5296501_linkedin_network_linkedin logo_icon.png" alt="LinkedIn link" width={60} height={60} />
+                    </Link>
+                    <Link href={"https://github.com/NathanHeaton"} target="_blank">
+                        <Image src="/icons/8725846_github_alt_icon.svg" alt="github link" width={60} height={60} />
+                    </Link>
                 </div>
-                <div >
-                  
-                    <p>Made by Nathan Heaton 2024</p>
+                <div className="flex row-auto gap-5 my-10 justify-center align-middle">
+                <Image src="/icons/logo.png" alt="N logo" width={113 * .8} height={118 *.8} />    
+                    <p className="align-middle">Made by Nathan Heaton 2024</p>
                 </div>
             </section>
         </footer>

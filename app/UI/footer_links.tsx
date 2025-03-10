@@ -28,8 +28,8 @@ export default function FooterLink()
                 <Link
                 key={link.name}
                 href={link.href}
-                className={clsx("flex justify center md: p-4 font-normal text-xl",
-                {"color-#0066cc" : userPath === link.href})}
+                className={clsx("flex justify center md: p-4 font-normal text-xl underline",
+                {"text-highlightblue" : userPath === link.href})}
                 >
                     {link.name}
                 </Link>

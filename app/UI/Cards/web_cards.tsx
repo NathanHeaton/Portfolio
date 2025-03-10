@@ -18,6 +18,22 @@ const Cards = [
         tools: " HTML, CSS, JS, Aseprite and Adobe Photoshop"
 
     },
+    {
+        id: "2",
+        title: "VLE (Virtual Learning Enviornment)",
+        subTitle: "SETU Carlow - UX Measurement",
+        description: "To see my entire report of my process and the steps involved in my process please view download the below PDF",
+        webLink: "https://nathanheaton.github.io/bloomingFlowerClock/",
+        mainImage: "/img/Module page adjusted.png",
+        mainImageAlt: "VLE login page",
+        secondaryImage: "/img/blooming flower sprites.png",
+        secondaryImageAlt: "pixel art flower sprite sheet",
+        size: "2/3",
+        shortDescription: "SETU Y3, High fidelity Wireframes, work process for VLE UI design and UX Measurement",
+        tools: "Figma, MS Forms and OBS(for user testing/recordings)"
+
+    },
+    
     
 ]
 
@@ -28,15 +44,15 @@ export default function WebCards(){
         {Cards.map((card) =>// returns a link for each section in code projects
         {
             return (
-            <section key={card.id} className={clsx(`w-full sm:w-${card.size}`,)} >
-                <div className={clsx(`w-full md:w-${card.size}`)} >
+            <section key={card.id} className={clsx(`w-${card.size}`,"max-sm:w-full")} >
+                <div className="w-full">
                     <div className="hover:flex hidden w-full h-full absolute justify-center"><h2 >{card.title}</h2></div>
                     <Image 
                         src={card.mainImage}
                         alt={card.mainImageAlt}
-                        width={300}
+                        width={10000}
                         height={500}
-                        className="w-full h-auto"
+                        className="w-full h-auto rounded-t-xl"
                     />
                 </div>
                 {/*</section><button class="back-button" onclick="shrinkCard(this, 33)" >back</button>*/}
