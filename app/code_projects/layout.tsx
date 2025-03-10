@@ -23,8 +23,8 @@ export default function CodeLayout({
         <CodeNav></CodeNav>
     </nav>
 
-    <main className="w-full flex justify-center max-w-400px md:w-5/6">
-    <section className="flex row flex-wrap w-full max-w-400">
+    <main className="w-full flex justify-center max-w-400 md:w-5/6">
+    <section className="flex row gap-10 flex-wrap">
         {children}
     </section>
     </main>

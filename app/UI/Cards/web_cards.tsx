@@ -44,7 +44,7 @@ export default function WebCards(){
         {Cards.map((card) =>// returns a link for each section in code projects
         {
             return (
-            <section key={card.id} className={clsx(`w-${card.size}`,"max-sm:w-full")} >
+            <section key={card.id} className={clsx(`max-w-${card.size}`,"max-sm:w-full")} >
                 <div className="w-full">
                     <div className="hover:flex hidden w-full h-full absolute justify-center"><h2 >{card.title}</h2></div>
                     <Image 

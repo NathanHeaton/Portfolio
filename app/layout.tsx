@@ -67,7 +67,7 @@ export default function RootLayout({
                 <div className="md:flex row-auto p-10">
                   <FooterLink />
                 </div>
-                <div className="flex row gap-5">
+                <div className="flex row gap-5 px-10">
                     <Link href={"https://www.linkedin.com/in/nathan-heaton-478541300/"} target="_blank">
                       <Image src="/icons/5296501_linkedin_network_linkedin logo_icon.png" alt="LinkedIn link" width={60} height={60} />
                     </Link>
