@@ -6,7 +6,7 @@ import Link from "next/link";
 import "./globals.css";
 import FooterLink from "./UI/footer_links";
 import Image from "next/image";
-
+import MobileNav from "./UI/mobile_top_nav";
 const alegreyaSerif = Alegreya({
   variable: "--font-alegreya-serif",
   subsets: ["latin"],
@@ -32,9 +32,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  function toggleNav(){
-
-  }
   return (
     <html lang="en">
         <meta name="description" content="Portfolio of Nathan Heaton, an Interactive Digital Art & Design student at SETU Carlow. Showcasing UX/UI design, web development, and digital art projects."></meta>
@@ -49,14 +46,15 @@ export default function RootLayout({
       <body className={`${alegreyaSerif.variable} ${tiltWarp.variable} antialiased`}>
         <header className="flex justify-between align-center h-25 w-full bg-energygreen " >
           <section className="flex align-center row-auto 2xl:ml-50 ml-10">
-            <div className="m-2 mt-7.5 sm:block hidden scale-80 2xl:scale-100">
+            <div className="m-2 mt-7.5 z-1 sm:block hidden scale-80 2xl:scale-100">
               <Image src="/icons/logo.png" alt="N logo" width={113 * .9} height={118 *.9} ></Image>    
             </div>    
             <h1 className="text-xl 2xl:text-[48px] my-3"> Nathan H</h1> 
            </section>    
-           <div className="xl:hidden absolute p-2 t-4 right-2" onClick={toggleNav()} ><Image src="/icons/Hamburger.png" alt="|||" width={50} height={50} /></div>
+           <nav className="xl:hidden">
+            <MobileNav />
+            </nav>
             <nav className="justify-end my-5 mr-10 xl:flex hidden 2xl:mr-20">
-
               <NavLink />
             </nav>
    
