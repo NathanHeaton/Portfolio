@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Alegreya, Tilt_Warp} from "next/font/google";
 import NavLink from "@/app/UI/nav_links"
 import Link from "next/link";
+import MouseEffect from "./components/mouseEffect";
 
 import "./globals.css";
 import FooterLink from "./UI/footer_links";
@@ -44,6 +45,7 @@ export default function RootLayout({
 
         <link rel="icon" href="/public/icons/logo.png" type="image/x-icon"/>
       <body className={`${alegreyaSerif.variable} ${tiltWarp.variable} antialiased`}>
+        <MouseEffect />
         <header className="flex justify-between align-center h-25 w-full bg-energygreen " >
           <section className="flex align-center row-auto 2xl:ml-50 ml-10">
             <div className="m-2 mt-7.5 z-1 sm:block hidden scale-80 2xl:scale-100">
