@@ -51,6 +51,7 @@ export default function MobileNav()
                             <Link
                             key={link.name}
                             href={link.href}
+                            onClick={handleCLick}
                             className={clsx("flex justify-end text-right duration-300 ease-in-out p-4  font-normal text-[24px] border-b-4 hover:border-highlightblue hover:bg-darkgreen",
                             userPath === link.href
                             ? "text-highlightblue border-highlightblue bg-energygreen"
