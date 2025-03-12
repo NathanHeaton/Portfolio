@@ -36,8 +36,9 @@ export default function MouseEffect() {
           {
               mousesEnlarged = true;
               mouseScale = 2
-              mouseText.style.display = "flex";
+              mouseText.style.display = "none";
               customMouse.style.color = "#0066cc";
+              customMouse.style.scale = "2";
 
       
           }
