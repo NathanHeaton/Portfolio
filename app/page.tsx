@@ -1,26 +1,44 @@
 import Image from "next/image";
+import ToolsShowcase from "./components/toolsShowcase";
+import ProjectGrid from "./UI/project_grid";
+import { motion } from "framer-motion";
+import SquareButtons from "./UI/square_buttons";
+
+//import RoundButton from "./UI/round_button";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="flex flex-col flex-wrap items-center justify-items-center min-h-screen p-8 pb-20 gap-5 sm:p-20 ">
 
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <section className="">
-					<h2>Nathan Heaton Portfolio</h2>
-					<p>Welcome to My Portfolio Explore my collection of art and programming projects, showcasing my journey 
-            and growth over the past few years. I’m currently a student at SETU Carlow, pursuing a degree in Interactive
-             Digital Art and Design. My work spans both traditional and digital art, with a recent focus on 3D modeling 
-             anddigital design. Alongside my artistic skills, I’m also experienced in coding, with proficiency in languages
-              like C++, JavaScript, and HTML. From developing interactive websitesto creating efficient, user-friendly 
-              interfaces, I love combining creativity with technical expertise to solve design and programming challenges.
-               Dive in to see how I blend creativity, design, and coding to bring ideas to life.</p>
-                        <button  id="center" ><a href="codeProjects.html" id="button-link">Code Projects</a></button>
-                        <p>To gain insight into my process check out my VLE Design</p>
-                        <button  id="center"><a id="button-link">VLE User Measurment Project</a></button>
-                        <p>To seem of my commision work experinece check out D&N O'Reillys Fuels</p>
-                        <button  id="center"><a  id="button-link">D&N O'Reillys Fuels</a></button>
+      <main className="flex flex-col gap-8 row-start-2 items-center max-w-[1400] sm:items-start">
+        <section className="flex-row w-full">
+          <article className="md:w-1/2 w-full">
+					<h1 className="my-5 ">Nathan Heaton <br /> Portfolio</h1>
+          <div>
+          <p className="hover:rotate-90 !text-[1.5rem] transition-all duration-300 absolute origin-center">👋</p> 
+          <p className="!text-[1.5rem] mb-5">.... Welcome to My Portfolio jump into projects I have worked on!!!</p>
+            <SquareButtons />
+          </div>
+          {/* <RoundButton href="" text=""/> */}
 
+          <a href="#about"
+            className="px-9 py-3 my-5 rounded-2xl flex w-fit bg-energygreen hover:bg-offWhite hover:text-highlightblue hover:px-12 transition-all duration-1000">
+            About Me
+          </a>
+          </article>
+          <ProjectGrid />
         </section>
+        <ToolsShowcase />
+        <section id="about"className="md:w-1/2 w-full max-w-1200">
+          <h1>About me</h1>
+          <p className="hover:rotate-90 transition-all duration-300 absolute origin-center">👋</p> 
+          <p>.... Welcome to My Portfolio Explore my collection of art and programming projects, showcasing my journey and growth over the past few years.<br /><br />
+          I’m currently a student at SETU Carlow, pursuing a degree in Interactive Digital Art and Design. My work spans both traditional and digital art, with a recent focus on 3D modeling and digital design. Alongside my artistic skills, I’m also experienced in coding, with proficiency in languages like C++, JavaScript, and HTML. From developing interactive websites to creating efficient, user-friendly interfaces, I love combining creativity with technical expertise to solve design and programming challenges.
+          <br /><br />
+          Dive in to see how I blend creativity, design, and coding to bring ideas to life.</p>
+        </section>
+
+      
 
 
 

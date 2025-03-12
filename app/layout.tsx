@@ -8,6 +8,7 @@ import "./globals.css";
 import FooterLink from "./UI/footer_links";
 import Image from "next/image";
 import MobileNav from "./UI/mobile_top_nav";
+
 const alegreyaSerif = Alegreya({
   variable: "--font-alegreya-serif",
   subsets: ["latin"],

@@ -34,8 +34,8 @@ export default function MouseEffect() {
               mousesEnlarged = true;
               mouseText.style.display = "flex";
               customMouse.style.backgroundColor = "#0066cc";
-              customMouse.classList.remove("w-4","h-4");
-              customMouse.classList.add("w-12","h-12");
+              customMouse.classList.remove("size-4");
+              customMouse.classList.add("size-15");
       
           }
           else if (cursorStyle === "pointer" && mousesEnlarged == false)
@@ -43,8 +43,8 @@ export default function MouseEffect() {
               mousesEnlarged = true;
               mouseText.style.display = "none";
               customMouse.style.backgroundColor = "#0066cc";
-              customMouse.classList.remove("w-12","h-12");
-              customMouse.classList.add("w-4","h-4");
+              customMouse.classList.remove("size-15");
+              customMouse.classList.add("size-4");
           }
       
           
@@ -55,8 +55,8 @@ export default function MouseEffect() {
               
               //console.log("shrinking")
               customMouse.style.backgroundColor = "#69de90";
-              customMouse.classList.remove("w-12","h-12");
-              customMouse.classList.add("w-4","h-4");
+              customMouse.classList.remove("size-15");
+              customMouse.classList.add("size-4");
           }
           customMouse.style.left = mouse.x - (mouseSize/2)  + "px";
           customMouse.style.top = mouse.y - (mouseSize/2) + "px";
@@ -72,8 +72,8 @@ export default function MouseEffect() {
     }, []);
   
     return (
-        <motion.div id="mouse" animate={{}} className="rounded-full md:flex hidden justify-center absolute w-4 h-4 opacity-80 pointer-events-none left-[-8px] top-[-8px] transition-all duration-300 z-3">
-          <p id="text" className="hidden p-2 my-1 !font-tilt text-sm" >View</p>
+        <motion.div id="mouse" animate={{}} className="rounded-full md:flex hidden justify-center absolute size-4 opacity-80 pointer-events-none left-[-8px] top-[-8px] transition-all duration-200 z-3">
+          <p id="text" className="hidden p-3 my-1 !font-tilt text-sm" >View</p>
         </motion.div>
     ); 
   }

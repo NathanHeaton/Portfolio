@@ -14,7 +14,8 @@ export default function Page(){
                     <p>Feel free to contact me either by phone or email if you have any question about my past work or if you think my work 
                         could suit one of your projects.</p>
                     <button >
-                        <a id="btn-link" href = "mailto:nathanmheaton@gmail.com?subject = Feedback&body = Message">
+                        <a className="px-9 py-3 my-5 rounded-2xl flex w-fit bg-darkgreen hover:bg-energygreen hover:text-highlightblue hover:px-12 transition-all duration-1000"
+                         href = "mailto:nathanmheaton@gmail.com?subject = Feedback&body = Message">
                         Write to me
                         </a>
                     </button>

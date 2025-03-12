@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { motion } from "framer-motion";
+
 
 import clsx from "clsx";
 
@@ -15,6 +15,7 @@ const Cards = [
         subTitle: "SETU Carlow year 3",
         description: "Clock represented by blooming flowers telling the season and time of day growth and movement of the flower implies the time have some trivia about the flower blooming in this month able to scroll through other months past months have wilted flowers and ones in the future are just seeds. Responsive mobile and desktop design. first mock up done in photoshop then I made a sprite sheet in aseprite with each of flower and their stage of growths. see whats in bloom today.",
         webLink: "https://nathanheaton.github.io/bloomingFlowerClock/",
+        buttonText: "Visit Site",
         // images
         mainImage: {src:"/img/Blooming flower image.png", alt: "pixel art flower", aspect :"aspect-[5/3]", height : "913"},
         secondaryImage: {src:"/img/blooming flower sprites.png", alt: "pixel art flower sprite sheet", width: 600, height : 300},
@@ -29,8 +30,9 @@ const Cards = [
         // text and links
         title: "VLE (Virtual Learning Enviornment)",
         subTitle: "SETU Carlow - UX Measurement",
-        description: "To see my entire report of my process and the steps involved in my process please view download the below PDF",
-        webLink: "https://nathanheaton.github.io/bloomingFlowerClock/",
+        description: "To see my entire report of my process and the steps involved in my \n\n" + "{<br />}" + "process please view download the below PDF",
+        webLink: "/doccuments/VLE Design Report.pdf",
+        buttonText: "VLE Design Report.pdf",
         // images        
         mainImage: {src:"/img/Module page adjusted.png", alt: "VLE login page", aspect :"aspect-[1920/1080]", height : "913"},
         secondaryImage: {src:"/img/Student Login page.png", alt: "VLE login page", width: 600, height : 300},
@@ -45,10 +47,12 @@ const Cards = [
         // text and links
         title: "Retrograde Website",
         subTitle: "Commission 2024",
-        description: "Website I designed and developed for Retrograde an Indie Soul-pop band based in Dublin. I used penpot to make a basic wireframe and then with feedback I made changes where need while increasing the fidelity. I add a spotify preview along with link to their relevent socials and a place to book tickets for their upcoming gig.",        webLink: "https://nathanheaton.github.io/bloomingFlowerClock/",
+        description: "Website I designed and developed for Retrograde an Indie Soul-pop band based in Dublin. I used penpot to make a basic wireframe and then with feedback I made changes where need while increasing the fidelity. I add a spotify preview along with link to their relevent socials and a place to book tickets for their upcoming gig.",
+        webLink: "https://nathanheaton.github.io/Retrograde-website/",
+        buttonText: "Visit Site",
         // images
         mainImage: {src:"/img/Retrograde.png", alt: "retrograde website", aspect :"aspect-[1920/1080]", height : "913"},
-        secondaryImage: {src:"/img/Retrograde-music.png", alt: "retrograde music preview website", width: 2, height : 3},
+        secondaryImage: {src:"/img/Retrograde-music.png", alt: "retrograde music preview website", width: 200, height : 100},
         // for short description
         shortDescription: "Commission 2024, Website for a band in Dublin",
         tools: "Penpot(wireframing), HTML, CSS and JS"
@@ -145,7 +149,7 @@ export default function WebCards(){
         {Cards.map((card) =>// returns a link for each section in code projects
         {
             return (
-            <section key={card.id} id={card.id} className={clsx(card.size, "max-md:w-full h-auto relative flex flex-col p-2 transition-all duration-300")} >
+            <section key={card.id} id={card.id} className={clsx(card.size, "max-md:w-full h-auto relative flex flex-col p-3 transition-all duration-300")} >
                 <div onClick={() =>{enlarge(card.id)}} className={clsx(card.mainImage.aspect, "w-full h-full relative overflow-hidden rounded-t-xl cursor-pointer")}>
                     <Image
                     src={card.mainImage.src}
@@ -163,7 +167,9 @@ export default function WebCards(){
                     <p>
                         {card.description}
                     </p>
-                    <a href={card.webLink} className="px-9 py-3 my-5 rounded-2xl flex w-fit bg-darkgreen hover:bg-energygreen hover:text-highlightblue hover:px-12 transition-all duration-1000" target="_blank">Check it out</a>
+                    <a href={card.webLink} className="px-9 py-3 my-5 rounded-2xl flex w-fit bg-darkgreen hover:bg-energygreen hover:text-highlightblue hover:px-12 transition-all duration-1000" target="_blank">
+                        {card.buttonText}
+                    </a>
                     <div className="my-5" >
                         <Image 
                             src={card.secondaryImage.src} alt={card.secondaryImage.alt} width={card.secondaryImage.width} height={card.secondaryImage.height}
