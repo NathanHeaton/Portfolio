@@ -8,10 +8,10 @@ export default function CodeLayout({
   }>) {
     return (
         
-<div className="flex flex-col flex-wrap items-center justify-items-center min-h-screen p-8 pb-20 gap-5 sm:p-20 ">
+<div className="flex flex-col flex-wrap items-center justify-items-center min-h-screen md:p-8 pb-20 gap-5 sm:p-20 ">
 
 
-    <section className="flex justify-center flex-wrap py-25 w-full md:max-w-200 md:w-3/5">
+    <section className="flex justify-center flex-wrap py-25 w-full md:max-w-200 md:w-3/5 px-8 md:px-0">
         <h1 className="text-l py-5">Programming and UX/UI portfolio</h1>
         <p>Here is all of my programming and design work, showcasing my technical skills and focus on user
              experience. I developed games using C++ and SFML in my first year of IDAD and another game in

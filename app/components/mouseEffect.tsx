@@ -44,7 +44,7 @@ export default function MouseEffect() {
         {
           mousesEnlarged = true;
           customMouse.style.backgroundColor = "#0066cc";
-          if (element.tagName == "IMG")
+          if (element.tagName == "DIV")
           {
             mouseText.classList.replace("opacity-0", "opacity-80");
             customMouse.classList.replace("size-4","size-17");
