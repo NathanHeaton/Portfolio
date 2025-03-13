@@ -3,7 +3,8 @@ import ToolsShowcase from "./components/toolsShowcase";
 import ProjectGrid from "./UI/project_grid";
 import { motion } from "framer-motion";
 import SquareButtons from "./UI/square_buttons";
-
+import RoundButtonPri from "./UI/round_buttonPri";
+import RoundButtonSec from "./UI/round_buttonSec";
 //import RoundButton from "./UI/round_button";
 
 export default function Home() {
@@ -19,18 +20,13 @@ export default function Home() {
           <p className="!text-[1.5rem] mb-5">.... Welcome to My Portfolio jump into projects I have worked on!!!</p>
             <SquareButtons />
           </div>
-          {/* <RoundButton href="" text=""/> */}
-
-          <a href="#about"
-            className="px-9 py-3 my-5 rounded-2xl flex w-fit bg-energygreen hover:bg-offWhite hover:text-highlightblue hover:px-12 transition-all duration-1000">
-            About Me
-          </a>
+          <RoundButtonSec href="index.html#about-me" text="About me"/>
           </article>
           <ProjectGrid />
         </section>
         <ToolsShowcase />
         <section id="about"className="md:w-1/2 w-full max-w-1200">
-          <h1>About me</h1>
+          <h1 id="about-me" >About me</h1>
           <p className="hover:rotate-90 transition-all duration-300 absolute origin-center">👋</p> 
           <p>.... Welcome to My Portfolio Explore my collection of art and programming projects, showcasing my journey and growth over the past few years.<br /><br />
           I’m currently a student at SETU Carlow, pursuing a degree in Interactive Digital Art and Design. My work spans both traditional and digital art, with a recent focus on 3D modeling and digital design. Alongside my artistic skills, I’m also experienced in coding, with proficiency in languages like C++, JavaScript, and HTML. From developing interactive websites to creating efficient, user-friendly interfaces, I love combining creativity with technical expertise to solve design and programming challenges.
