@@ -1,11 +1,12 @@
 "use client"
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import RoundButtonPri from "../round_buttonPri";
 import Cards from "./web_cards_data"
 import clsx from "clsx";
 import ShortDescription from "./card_short_description";
+import CardImage from "./card_image";
 
 
 export default function WebCards(){
@@ -14,6 +15,7 @@ export default function WebCards(){
 
     let prevCard = null;
     let timeoutId = null;
+
 
     const m_window = window; // assign window because function won't see it not sure why
 
@@ -90,6 +92,11 @@ export default function WebCards(){
             imageDiv?.classList.add("cursor-pointer");
             console.log(element);
         }
+
+    function returnImageValue(card, value)
+    {
+        return card.card.secondaryImage.value
+    }
     }}
     // if the user scrolls this clears the auto scroll
     window.addEventListener("scroll", () =>{
@@ -100,7 +107,7 @@ export default function WebCards(){
         {Cards.map((card) =>// returns a link for each section in code projects
         {
             return (
-            <section key={card.id} id={card.id} className={clsx(card.size, "max-md:w-full h-auto relative flex flex-col p-3 transition-all duration-600")} >
+                <section key={card.id} id={card.id} className={clsx(card.size, "max-md:w-full md:aspect-auto h-auto relative flex flex-col p-3 transition-all duration-600", `${card.mainImage.aspect}`)} >
                 <div onClick={() =>{enlarge(card.id)}} className={clsx(card.mainImage.aspect, "w-full h-full relative overflow-hidden rounded-t-xl cursor-pointer")}>
                     <Image
                     src={card.mainImage.src}
@@ -121,11 +128,10 @@ export default function WebCards(){
                     {card.description}
                     </p>
                     <RoundButtonPri href={card.webLink} text={card.buttonText} />
-                    <div className="my-5" >
-                        <Image 
-                            src={card.secondaryImage.src} alt={card.secondaryImage.alt} width={card.secondaryImage.width} height={card.secondaryImage.height}
-                            />
-                    </div>
+
+                    {card.secondaryImage.map((image, index) =>( // generates for each image
+                    <CardImage key={index} src={image.src} alt={image.alt} height={image.height} width={image.width} />
+                    ))}
                 </article>  
                 <ShortDescription description={card.shortDescription} tools={card.tools} />
             </section>
