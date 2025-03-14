@@ -19,7 +19,8 @@ const Cards = [
         secondaryImage: [{src:"/img/blooming flower sprites.png", alt: "pixel art flower sprite sheet", width: 600, height : 300}],
         // for short description
         shortDescription: "SETU Y3, Unconventional clock, based on flowers",
-        tools: " HTML, CSS, JS, Aseprite and Adobe Photoshop"
+        tools: " HTML, CSS, JS, Aseprite and Adobe Photoshop",
+        extenion: [{extension : false},{}]
 
     },
     {
@@ -36,7 +37,8 @@ const Cards = [
         // for short description
         shortDescription: "SETU Y3, High fidelity Wireframes, work process for VLE UI design and UX Measurement",
         tools: "Figma, MS Forms and OBS(for user testing/recordings)",
-        extenion: ""
+
+        extenion: [{extension : true},{}]// add rest of info
 
     },
     {

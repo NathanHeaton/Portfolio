@@ -13,14 +13,17 @@ export default function Home() {
 
       <main className="flex flex-col gap-8 row-start-2 items-center max-w-[1800] sm:items-start">
         <section className="flex w-full flex-wrap">
-          <article className="xl:w-1/3 w-full 2xl:pr-30 flex-row xl:flex-col">
-            <h1 className="my-5 md:w-1/2">Nathan Heaton <br /> Portfolio</h1>
-            <div className="mb-15 md:w-1/2">
-            <p className="hover:rotate-90 !text-[1.5rem] transition-all duration-300 absolute origin-center">👋</p> 
-            <p className="!text-[1.5rem] mb-5">.... Welcome to My Portfolio, here are my main skills:</p>
+          <article className="xl:w-1/3 w-full flex-col md:flex xl:flex-col">
+            <div className="w-full md:w-1/2 xl:w-full">
+            <h1 className="my-5 ">Nathan Heaton <br /> Portfolio</h1>
+            <RoundButtonSec href="#about-me" text="About me"/>
+            </div>
+            <div className="mb-15 md:w-1/2 xl:w-full">
+              <p className="hover:rotate-90 !text-[1.5rem] transition-all duration-300 absolute origin-center">👋</p> 
+              <p className="!text-[1.5rem] mb-5">.... Welcome to My Portfolio, here are my main skills:</p>
               <SquareButtons />
             </div>
-            <RoundButtonSec href="#about-me" text="About me"/>
+            
           </article>
           <ProjectGrid />
         </section>

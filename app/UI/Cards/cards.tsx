@@ -7,6 +7,7 @@ import Cards from "./web_cards_data"
 import clsx from "clsx";
 import ShortDescription from "./card_short_description";
 import CardImage from "./card_image";
+import ExtendedDescription from "./extended_description";
 
 
 export default function WebCards(){
@@ -95,11 +96,6 @@ export default function WebCards(){
             imageDiv?.classList.add("cursor-pointer");
             console.log(element);
         }
-
-    function returnImageValue(card, value)
-    {
-        return card.card.secondaryImage.value
-    }
     }}
     // if the user scrolls this clears the auto scroll
     window.addEventListener("scroll", () =>{
@@ -139,6 +135,7 @@ export default function WebCards(){
                     ))}
                 </article>  
                 <ShortDescription description={card.shortDescription} tools={card.tools} />
+                <ExtendedDescription extenion={card.extenion.}  description={card.shortDescription} tools={card.tools}/>
             </section>
             )
             }
