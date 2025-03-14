@@ -62,13 +62,13 @@ export default function MouseEffect() {
       }
     };
 
-    function lerp(start, end, factor) {
-      return start + (end - start) * factor;
+    function lerp(start, end) {
+      return start + (end - start) * 0.25;
     }
 
     const animate = () => {
-      mousePos.x = lerp(mousePos.x, targetPos.x, 0.05); // Lower factor = smoother transition
-      mousePos.y = lerp(mousePos.y, targetPos.y, 0.05);
+      mousePos.x = lerp(mousePos.x, targetPos.x); // Lower factor = smoother transition
+      mousePos.y = lerp(mousePos.y, targetPos.y);
 
       if (customMouse) {
         customMouse.style.left = `${mousePos.x - mouseSize / 2}px`;

@@ -12,9 +12,12 @@ import CardImage from "./card_image";
 export default function WebCards(){
 
     const [open, setenlarged] = useState({});
+    const element = useRef(null);
 
     let prevCard = null;
     let timeoutId = null;
+
+    const useEffect = () =>{}
 
 
     const m_window = window; // assign window because function won't see it not sure why
@@ -107,7 +110,7 @@ export default function WebCards(){
         {Cards.map((card) =>// returns a link for each section in code projects
         {
             return (
-                <section key={card.id} id={card.id} className={clsx(card.size, "max-md:w-full md:aspect-auto h-auto relative flex flex-col p-3 transition-all duration-600", `${card.mainImage.aspect}`)} >
+                <section key={card.id} id={card.id} ref={element} className={clsx(card.size, "max-md:w-full md:aspect-auto h-auto relative flex flex-col p-3 transition-all duration-600", `${card.mainImage.aspect}`)} >
                 <div onClick={() =>{enlarge(card.id)}} className={clsx(card.mainImage.aspect, "w-full h-full relative overflow-hidden rounded-t-xl cursor-pointer")}>
                     <Image
                     src={card.mainImage.src}
@@ -127,7 +130,9 @@ export default function WebCards(){
                     <p>
                     {card.description}
                     </p>
-                    <RoundButtonPri href={card.webLink} text={card.buttonText} />
+                    {card.button.map((button) =>( // generates for each button
+                    <RoundButtonPri href={button.link} text={button.text} />
+                    ))}
 
                     {card.secondaryImage.map((image, index) =>( // generates for each image
                     <CardImage key={index} src={image.src} alt={image.alt} height={image.height} width={image.width} />

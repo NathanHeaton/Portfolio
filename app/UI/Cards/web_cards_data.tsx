@@ -13,11 +13,10 @@ const Cards = [
             "Responsive mobile and desktop design. first mock up done in photoshop then I made a sprite sheet in aseprite with each of flower and their stage of growths.",
              , <br key={3}/>, <br key={4} />,
              "See whats in bloom today."],
-        webLink: "https://nathanheaton.github.io/bloomingFlowerClock/",
-        buttonText: "Visit Site",
+        button: [{link : "https://nathanheaton.github.io/bloomingFlowerClock/", text : "Visit Site" }],
         // images
         mainImage: {src:"/img/Blooming flower image.png", alt: "pixel art flower", aspect : "aspect-[3/5]"},
-        secondaryImage: [{src:"/img/blooming flower sprites.png", alt: "pixel art flower sprite sheet", width: 600, height : 300},{src:"/img/blooming flower sprites.png", alt: "pixel art flower sprite sheet", width: 600, height : 300},],
+        secondaryImage: [{src:"/img/blooming flower sprites.png", alt: "pixel art flower sprite sheet", width: 600, height : 300}],
         // for short description
         shortDescription: "SETU Y3, Unconventional clock, based on flowers",
         tools: " HTML, CSS, JS, Aseprite and Adobe Photoshop"
@@ -30,51 +29,75 @@ const Cards = [
         title: "VLE (Virtual Learning Enviornment)",
         subTitle: "SETU Carlow - UX Measurement",
         description: ["To see my entire report of my process and the steps involved in my process please view download the below PDF"],
-        webLink: "/doccuments/VLE Design Report.pdf",
-        buttonText: "VLE Design Report.pdf",
+        button: [{link : "/doccuments/VLE Design Report.pdf", text : "VLE Design Report.pdf" }],
         // images        
         mainImage: {src:"/img/Module page adjusted.png", alt: "VLE login page", aspect :"aspect-[19/10]"},
         secondaryImage: [{src:"/img/Student Login page.png", alt: "VLE login page", width: 600, height : 300}],
         // for short description
         shortDescription: "SETU Y3, High fidelity Wireframes, work process for VLE UI design and UX Measurement",
-        tools: "Figma, MS Forms and OBS(for user testing/recordings)"
+        tools: "Figma, MS Forms and OBS(for user testing/recordings)",
+        extenion: ""
 
     },
-    // {
-    //     id: "2",
-    //     size: "w-2/3",
-    //     // text and links
-    //     title: "Retrograde Website",
-    //     subTitle: "Commission 2024",
-    //     description: ["Website I designed and developed for Retrograde an Indie Soul-pop band based in Dublin. I used penpot to make a basic wireframe and then with feedback I made changes where need while increasing the fidelity. I add a spotify preview along with link to their relevent socials and a place to book tickets for their upcoming gig."],
-    //     webLink: "https://nathanheaton.github.io/Retrograde-website/",
-    //     buttonText: "Visit Site",
-    //     // images
-    //     mainImage: {src:"/img/Retrograde.png", alt: "retrograde website", aspect :"aspect-[1920/1080]"},
-    //     secondaryImage: {src:"/img/Retrograde-music.png", alt: "retrograde music preview website", width: 200, height : 100},
-    //     // for short description
-    //     shortDescription: "Commission 2024, Website for a band in Dublin",
-    //     tools: "Penpot(wireframing), HTML, CSS and JS"
+    {
+        id: "2",
+        size: "w-2/3",
+        // text and links
+        title: "Retrograde Website",
+        subTitle: "Commission 2024",
+        description: ["Website I designed and developed for Retrograde an Indie Soul-pop band based in Dublin. I used penpot to make a basic wireframe and then with feedback I made changes where need while increasing the fidelity. I add a spotify preview along with link to their relevent socials and a place to book tickets for their upcoming gig."],
+        button: [{link : "https://nathanheaton.github.io/Retrograde-website/", text : "Visit Site" }],
+        // images
+        mainImage: {src:"/img/Retrograde.png", alt: "retrograde website", aspect :"aspect-[1920/1200]"},
+        secondaryImage: [{src:"/img/Retrograde-music.png", alt: "retrograde music preview website", width: 400, height : 300}],
+        // for short description
+        shortDescription: "Commission 2024, Website for a band in Dublin",
+        tools: "Penpot(wireframing), HTML, CSS and JS"
 
-    // },
-    // {
-    //     id: 3,
-    //     size: 'w-1/3',
-    //     title: 'Portfolio Website',
-    //     subTitle: 'SETU Carlow year 2-3',
-    //     description: [
-    //       'Portfolio Website showing off my work in and out of SETU.',
-    //       'HTML: 1,999 loc',
-    //       'CSS: 823 loc',
-    //       'JavaScript: 362 loc',
-    //     ],
-    //     shortDescription: 'SETU Y2-Y3, Portfolio website showing of my work in and out of SETU',
-    //     webLink: 'https://nathanheaton.github.io/Web-User-Interface-Design/index.html',
-    //     buttonText: 'Home Page',
-    //     mainImage: { src: "/img/porfolio-page-mobile.png", alt: "Portfolio mobile page", aspect: "aspect-[5/3]" },
-    //     secondaryImage: { src: "/img/codeprojects-showcase.png", alt: "Showcase of my code projects", width: 600, height: 300 },
-    //     tools: 'HTML, CSS, JavaScript, Penpot, Inkscape, Adobe Photoshop',
-    //   },
+    },
+    {
+      id: "3",
+      size: "w-1/3",
+      // text and links
+      title: "Intern Manager",
+      subTitle: "SETU Y3",
+      description: ["Intern managment App to find Interns from colleges, made in Flutterflow protoytpes in Figma. The app is connect to a firebase database to store user data."],
+      button: [],
+      // images
+      mainImage: {src:"/img/Intern Manager.png", alt: "retrograde website", aspect :"aspect-[3/4]"},
+      secondaryImage: [{src:"/img/Intern Manager Chat.png", alt: "Intern manager chat", width: 600, height : 400},
+      {src:"/img/Intern Manager Prototypes.png", alt: "Intern manager chat", width: 600, height : 400},
+      {src:"/img/Intern Manager Discover.png", alt: "Intern manager chat", width: 200, height : 400}
+      ],
+      // for short description
+      shortDescription: "Commission 2024, Website for a band in Dublin",
+      tools: "Penpot(wireframing), HTML, CSS and JS"
+
+  },
+    {
+        id: "4",
+        size: 'w-1/3',
+        title: 'Portfolio Website',
+        subTitle: 'SETU Carlow year 2-3',
+        description: [
+          'Portfolio Website showing off my work in and out of SETU.',
+          'HTML: 1,999 loc',
+          'CSS: 823 loc',
+          'JavaScript: 362 loc',
+           <br />,
+           <br />,
+          "To see my entire report of my process and the steps involved in my process please view download the below PDF and my early wireframes:"
+        ],
+        shortDescription: 'SETU Y2-Y3, Portfolio website showing of my work in and out of SETU',
+        button: [{link : "https://nathanheaton.github.io/Web-User-Interface-Design/index.html", text : "Old home page" },
+        {link : "/doccuments/mobile and desktop medium.pdf", text : "mobile and desktop medium.pdf" },
+        {link : "/doccuments/mobile and desktop high fidelty .pdf", text : "mobile and desktop high fidelty .pdf" },
+        {link : "/doccuments/Portfolio Design Doccument.pdf", text : "Portfolio Design Doccument.pdf" }
+        ],
+        mainImage: { src: "/img/porfolio-page-mobile.png", alt: "Portfolio mobile page", aspect: "aspect-[3/4]" },
+        secondaryImage: [{ src: "/img/codeprojects-showcase.png", alt: "Showcase of my code projects", width: 600, height: 300 }],
+        tools: 'HTML, CSS, JavaScript, Penpot, Inkscape, Adobe Photoshop',
+      },
     //   {
     //     id: 4,
     //     size: 'w-1/3',
