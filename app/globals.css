@@ -79,3 +79,11 @@ p, li {
   font-family: "Alegreya", serif;
   font-size: 1.2rem;
 }
+
+@media only screen and (max-width: 768px) {
+  /* Mobile */
+
+  H1{
+    font-size:40px;
+  }
+}

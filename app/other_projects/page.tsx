@@ -1,7 +1,8 @@
-import Image from "next/image"
+import MusicCards from "../UI/Cards/music_cards_data";
+import GenCards from "../UI/Cards/cards";
 
 export default function Page(){    
     return     (
-      <p>music</p>
+      <GenCards Cards={MusicCards}/>
     )
 }

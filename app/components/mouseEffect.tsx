@@ -63,7 +63,7 @@ export default function MouseEffect() {
     };
 
     function lerp(start, end) {
-      return start + (end - start) * 0.25;
+      return start + (end - start) * 0.10;
     }
 
     const animate = () => {

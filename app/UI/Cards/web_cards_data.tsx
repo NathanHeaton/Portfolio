@@ -20,7 +20,7 @@ const Cards = [
         // for short description
         shortDescription: "SETU Y3, Unconventional clock, based on flowers",
         tools: " HTML, CSS, JS, Aseprite and Adobe Photoshop",
-        extenion: [{extension : false},{}]
+        extenion: [{extension : false,VLE : false}]
 
     },
     {
@@ -29,8 +29,8 @@ const Cards = [
         // text and links
         title: "VLE (Virtual Learning Enviornment)",
         subTitle: "SETU Carlow - UX Measurement",
-        description: ["To see my entire report of my process and the steps involved in my process please view download the below PDF"],
-        button: [{link : "/doccuments/VLE Design Report.pdf", text : "VLE Design Report.pdf" }],
+        description: ["To see my entire report of my process and the steps involved in my process please view download the below PDF, you can also view my Figma project below."],
+        button: [{link : "/doccuments/VLE Design Report.pdf", text : "VLE Design Report.pdf" },{link : "https://www.figma.com/design/gbVMIeZDShAIkHxHYnnVOA/VLE-wireframe?node-id=0-1", text : "Figma Project" }],
         // images        
         mainImage: {src:"/img/Module page adjusted.png", alt: "VLE login page", aspect :"aspect-[19/10]"},
         secondaryImage: [{src:"/img/Student Login page.png", alt: "VLE login page", width: 600, height : 300}],
@@ -38,7 +38,7 @@ const Cards = [
         shortDescription: "SETU Y3, High fidelity Wireframes, work process for VLE UI design and UX Measurement",
         tools: "Figma, MS Forms and OBS(for user testing/recordings)",
 
-        extenion: [{extension : true},{}]// add rest of info
+        extenion: [{extension : true , VLE : true}]// add rest of info
 
     },
     {
@@ -54,7 +54,8 @@ const Cards = [
         secondaryImage: [{src:"/img/Retrograde-music.png", alt: "retrograde music preview website", width: 400, height : 300}],
         // for short description
         shortDescription: "Commission 2024, Website for a band in Dublin",
-        tools: "Penpot(wireframing), HTML, CSS and JS"
+        tools: "Penpot(wireframing), HTML, CSS and JS",
+        extenion: [{extension : false,VLE : false}]
 
     },
     {
@@ -73,101 +74,121 @@ const Cards = [
       ],
       // for short description
       shortDescription: "Commission 2024, Website for a band in Dublin",
-      tools: "Penpot(wireframing), HTML, CSS and JS"
+      tools: "Penpot(wireframing), HTML, CSS and JS",
+      extenion: [{extension : false , VLE : false}]
 
   },
+  {
+    id: "9", // Assuming this is the next ID in your sequence
+    size: "w-2/3", // Assuming it's a large card based on the class "card-content-large"
+    // text and links
+    title: "DNOreilly's Fuels Website",
+    subTitle: "Commission",
+    description: [
+        "This is a website I made for D&N O'Reilly Solidfuels & Timber, a local company here in Carlow that sells solid fuels and gas.",
+        "I made this website with the help of Shopify. I used presets and then added my HTML and CSS on top to get the right look. Most of my time was spent making layouts and choosing colour schemes."
+    ],
+    button: [{ link: "https://dnoreillysfuels.com/", text: "Check it out" }],
+    // images
+    mainImage: { src: "/img/dnoreillys-website.PNG", alt: "website for dnoreillysfuels LTD selling fuels", aspect: "aspect-[1920/1080]" }, // Adjust aspect ratio as needed
+    secondaryImage: [],
+    shortDescription: "Commission, D&N O'Reilly Solidfuels & Timber web design & development",
+    tools: "Inkscape (wireframing), Shopify, CSS",
+    extenion: [{ extension: true, VLE: false }]
+  },
+  {
+      id: "4",
+      size: 'w-1/3',
+      title: 'Portfolio Website',
+      subTitle: 'SETU Carlow year 2-3',
+      description: [
+        'Portfolio Website showing off my work in and out of SETU.',
+        'HTML: 1,999 loc',
+        'CSS: 823 loc',
+        'JavaScript: 362 loc',
+          <br />,
+          <br />,
+        "To see my entire report of my process and the steps involved in my process please view download the below PDF and my early wireframes:"
+      ],
+      shortDescription: 'SETU Y2-Y3, Portfolio website showing of my work in and out of SETU',
+      button: [{link : "https://nathanheaton.github.io/Web-User-Interface-Design/index.html", text : "Old home page" },
+      {link : "/doccuments/mobile and desktop medium.pdf", text : "mobile and desktop medium.pdf" },
+      {link : "/doccuments/mobile and desktop high fidelty .pdf", text : "mobile and desktop high fidelty .pdf" },
+      {link : "/doccuments/Portfolio Design Doccument.pdf", text : "Portfolio Design Doccument.pdf" }
+      ],
+      mainImage: { src: "/img/porfolio-page-mobile.png", alt: "Portfolio mobile page", aspect: "aspect-[3/4]" },
+      secondaryImage: [{ src: "/img/codeprojects-showcase.png", alt: "Showcase of my code projects", width: 600, height: 300 }],
+      tools: 'HTML, CSS, JavaScript, Penpot, Inkscape, Adobe Photoshop',
+      extenion: [{extension : false , VLE : false}]
+    },
     {
-        id: "4",
-        size: 'w-1/3',
-        title: 'Portfolio Website',
-        subTitle: 'SETU Carlow year 2-3',
-        description: [
-          'Portfolio Website showing off my work in and out of SETU.',
-          'HTML: 1,999 loc',
-          'CSS: 823 loc',
-          'JavaScript: 362 loc',
-           <br />,
-           <br />,
-          "To see my entire report of my process and the steps involved in my process please view download the below PDF and my early wireframes:"
-        ],
-        shortDescription: 'SETU Y2-Y3, Portfolio website showing of my work in and out of SETU',
-        button: [{link : "https://nathanheaton.github.io/Web-User-Interface-Design/index.html", text : "Old home page" },
-        {link : "/doccuments/mobile and desktop medium.pdf", text : "mobile and desktop medium.pdf" },
-        {link : "/doccuments/mobile and desktop high fidelty .pdf", text : "mobile and desktop high fidelty .pdf" },
-        {link : "/doccuments/Portfolio Design Doccument.pdf", text : "Portfolio Design Doccument.pdf" }
-        ],
-        mainImage: { src: "/img/porfolio-page-mobile.png", alt: "Portfolio mobile page", aspect: "aspect-[3/4]" },
-        secondaryImage: [{ src: "/img/codeprojects-showcase.png", alt: "Showcase of my code projects", width: 600, height: 300 }],
-        tools: 'HTML, CSS, JavaScript, Penpot, Inkscape, Adobe Photoshop',
-      },
-    //   {
-    //     id: 4,
-    //     size: 'w-1/3',
-    //     title: 'USAP Redesign Wireframe',
-    //     subTitle: 'SETU Carlow',
-    //     description: [
-    //       'A medium fidelity redesign I designed for UI testing in 2nd year.',
-    //       'I was tasked with redesigning a website with a bad or outdated design. USAP is a US website about Antarctica, it has loads of information and programs, but I found it very outdated compared to other US government websites.',
-    //       'I tried to give it a modern refresh.',
-    //     ],
-    //     shortDescription: 'SETU Y2, Conduct user testing and redesign website',
-    //     webLink: 'https://www.usap.gov/',
-    //     buttonText: 'Vist Site',
-    //     mainImage: { src: "/img/USAP redesign.PNG", alt: "USAP redesign wireframe", aspect: "aspect-[5/3]" },
-    //     secondaryImage: { src: "/img/USAP wire1.png", alt: "USAP wireframe design", width: 600, height: 300 },
-    //     tools: 'Inkscape(wireframing)',
-    //   },
-    //   {
-    //     id: 5,
-    //     size: 'w-2/3',
-    //     title: 'Riverside Take Away Website',
-    //     subTitle: 'SETU Carlow',
-    //     description: [
-    //       'A website for Riverside takeaway to showcase menu, contact info, and sell spice bags.',
-    //       'I used WooCommerce and a theme found on WordPress, customising the header image and colour scheme to match Riverside’s branding. I also made changes to the theme’s code to better suit the project needs.',
-    //       'I used generative AI for the content and set up the SQL database for the website through Plesk.',
-    //     ],
-    //     shortDescription: 'SETU Y3, Website for local Cantonese take away',
-    //     webLink: 'https://idad3c00286899.candept.com/RS/',
-    //     buttonText: 'Vist Site',
-    //     mainImage: { src: "/img/Riverside Takeaway Website.png", alt: "Riverside Takeaway website design", aspect: "aspect-[5/3]" },
-    //     secondaryImage: { src: "/img/Riverside basket.png", alt: "Riverside basket display", width: 600, height: 300 },
-    //     tools: 'WordPress, SQL, Adobe Photoshop',
-    //   },
-    //   {
-    //     id: 6,
-    //     size: 'w-2/3',
-    //     title: 'Escape from Time',
-    //     subTitle: 'SETU Carlow',
-    //     description: [
-    //       'A puzzle action game about time travel. I used JavaScript extensively to build this game.',
-    //       'The game involves solving puzzles using time portals to navigate through challenges. The game is mobile and desktop compatible, and it saves user data in local storage.',
-    //       'I also used sound effects and music composed in FL Studio.',
-    //     ],
-    //     shortDescription: 'SETU Y2, Puzzle action game about time travel',
-    //     webLink: 'https://ui-programming-23-24.codeberg.page/Nathan-Heaton-C00286899-UI-Programming-Module-Project/',
-    //     buttonText: 'Vist Site',
-    //     mainImage: { src: "/img/Escape from time gameplay.PNG", alt: "Escape from Time gameplay", aspect: "aspect-[5/3]" },
-    //     secondaryImage: { src: "/img/Escape from time options.PNG", alt: "Escape from Time options menu", width: 600, height: 300 },
-    //     tools: 'HTML, CSS, JavaScript, Aseprite',
-    //   },
-    //   {
-    //     id: 7,
-    //     size: 'w-1/3',
-    //     title: 'Band Promotion Website',
-    //     subTitle: 'SETU Carlow',
-    //     description: [
-    //       'Responsive website built for promoting a band. It features a form that saves user information to local storage.',
-    //       'I tested more complex HTML, CSS, and JavaScript, using jQuery for smooth animations.',
-    //     ],
-    //     shortDescription: 'SETU Y2, HTML Practicals',
-    //     webLink: 'https://c00286899.candept.com/Practicals/lab5/',
-    //     buttonText: 'Vist Site',
-    //     mainImage: { src: "/img/band-website.PNG", alt: "Band Promotion website design", aspect: "aspect-[5/3]" },
-    //     secondaryImage: { src: "/img/band-website-carousel1.png", alt: "Band Promotion carousel", width: 600, height: 300 },
-    //     tools: 'HTML, CSS, JavaScript',
-    //   },
-    
+      id: "5",
+      size: 'w-1/3',
+      title: 'USAP Redesign Wireframe',
+      subTitle: 'SETU Carlow',
+      description: [
+        'A medium fidelity redesign I designed for UI testing in 2nd year.',
+        'I was tasked with redesigning a website with a bad or outdated design. USAP is a US website about Antarctica, it has loads of information and programs, but I found it very outdated compared to other US government websites.',
+        'I tried to give it a modern refresh.',
+      ],
+      shortDescription: 'SETU Y2, Conduct user testing and redesign website',
+      button: [{link : 'https://www.usap.gov/', text : "Vist Site" }],
+      mainImage: { src: "/img/USAP redesign.PNG", alt: "USAP redesign wireframe", aspect: "aspect-[5/3]" },
+      secondaryImage: [{ src: "/img/USAP wire1.png", alt: "USAP wireframe design", width: 600, height: 300 }],
+      tools: 'Inkscape(wireframing)',
+      extenion: [{extension : false , VLE : false}]
+    },
+    {
+      id: "6",
+      size: 'w-2/3',
+      title: 'Riverside Take Away Website',
+      subTitle: 'SETU Carlow',
+      description: [
+        'A website for Riverside takeaway to showcase menu, contact info, and sell spice bags.',
+        'I used WooCommerce and a theme found on WordPress, customising the header image and colour scheme to match Riverside’s branding. I also made changes to the theme’s code to better suit the project needs.',
+        'I used generative AI for the content and set up the SQL database for the website through Plesk.',
+      ],
+      shortDescription: 'SETU Y3, Website for local Cantonese take away',
+      button: [{link : 'https://idad3c00286899.candept.com/RS/', text : "Vist Site" }],
+      mainImage: { src: "/img/Riverside Takeaway Website.png", alt: "Riverside Takeaway website design", aspect: "aspect-[5/3]" },
+      secondaryImage: [{ src: "/img/Riverside basket.png", alt: "Riverside basket display", width: 600, height: 300 }],
+      tools: 'WordPress, SQL, Adobe Photoshop',
+      extenion: [{extension : false , VLE : false}]
+    },
+    {
+      id: "7",
+      size: 'w-2/3',
+      title: 'Escape from Time',
+      subTitle: 'SETU Carlow',
+      description: [
+        'A puzzle action game about time travel. I used JavaScript extensively to build this game.',
+        'The game involves solving puzzles using time portals to navigate through challenges. The game is mobile and desktop compatible, and it saves user data in local storage.',
+        'I also used sound effects and music composed in FL Studio.',
+      ],
+      shortDescription: 'SETU Y2, Puzzle action game about time travel',
+      button: [{link : 'https://ui-programming-23-24.codeberg.page/Nathan-Heaton-C00286899-UI-Programming-Module-Project/', text : "Vist Site" }],
+      mainImage: { src: "/img/Escape from time gameplay.PNG", alt: "Escape from Time gameplay", aspect: "aspect-[5/3]" },
+      secondaryImage: [{ src: "/img/Escape from time options.PNG", alt: "Escape from Time options menu", width: 600, height: 300 }],
+      tools: 'HTML, CSS, JavaScript, Aseprite',
+      extenion: [{extension : false , VLE : false}]
+    },
+    {
+      id: "8",
+      size: 'w-1/3',
+      title: 'Band Promotion Website',
+      subTitle: 'SETU Carlow',
+      description: [
+        'Responsive website built for promoting a band. It features a form that saves user information to local storage.',
+        'I tested more complex HTML, CSS, and JavaScript, using jQuery for smooth animations.',
+      ],
+      shortDescription: 'SETU Y2, HTML Practicals',
+      button: [{link : 'https://c00286899.candept.com/Practicals/lab5/', text : "Vist Site" }],
+      mainImage: { src: "/img/band-website.PNG", alt: "Band Promotion website design", aspect: "aspect-[5/3]" },
+      secondaryImage: [{ src: "/img/band-website-carousel1.png", alt: "Band Promotion carousel", width: 600, height: 300 }],
+      tools: 'HTML, CSS, JavaScript',
+      extenion: [{extension : false , VLE : false}]
+    },
+  
     
 ]
 

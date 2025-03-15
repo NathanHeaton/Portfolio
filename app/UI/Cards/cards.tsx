@@ -3,14 +3,13 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import RoundButtonPri from "../round_buttonPri";
-import Cards from "./web_cards_data"
+
 import clsx from "clsx";
 import ShortDescription from "./card_short_description";
 import CardImage from "./card_image";
 import ExtendedDescription from "./extended_description";
 
-
-export default function WebCards(){
+export default function GenCards({Cards}){
 
     const [open, setenlarged] = useState({});
     const element = useRef(null);
@@ -45,6 +44,7 @@ export default function WebCards(){
             let shortDescription = element.querySelector("section");
             let closeButton = element.querySelector("button");
             let overlayDiv = element.querySelectorAll("div")[1]
+            let extenion = element.querySelectorAll("section")[1];
 
             element.classList.remove(Cards[id].size, "h-auto");
             element.classList.add("bg-darkgrey", "w-full", "!min-h-[" + Cards[id].mainImage.height + "rem]");
@@ -53,7 +53,14 @@ export default function WebCards(){
 
             if (m_window.innerWidth > 768) // if on desktop
             {
-                element.classList.replace("flex-col", "flex-row");
+                
+                if(Cards[id].extenion[0].extension)
+                {
+                    element.classList.add("flex-col");
+                }
+                else{
+                    element.classList.replace("flex-col", "flex-row");
+                }
                 imageDiv?.classList.replace("w-full","w-1/2");
             }
             imageDiv?.classList.remove("rounded-t-xl");
@@ -63,6 +70,7 @@ export default function WebCards(){
             shortDescription?.classList.replace("flex","hidden");
             closeButton?.classList.replace("hidden","flex");
             overlayDiv?.classList.add("hidden");
+            extenion?.classList.replace("hidden","flex");
 
             console.log(element);
                     
@@ -82,6 +90,7 @@ export default function WebCards(){
             let shortDescription = element.querySelector("section")
             let closeButton = element.querySelector("button");
             let overlayDiv = element.querySelectorAll("div")[1];
+            let extenion = element.querySelectorAll("section")[1];
 
             //effect
             element.classList.replace("flex-row", "flex-col");
@@ -94,6 +103,7 @@ export default function WebCards(){
             closeButton?.classList.replace("flex","hidden");
             overlayDiv?.classList.remove("hidden");
             imageDiv?.classList.add("cursor-pointer");
+            extenion?.classList.replace("flex","hidden");
             console.log(element);
         }
     }}
@@ -103,11 +113,11 @@ export default function WebCards(){
     })
     return(
         <>
-        {Cards.map((card) =>// returns a link for each section in code projects
+        {Cards.map((card, index) =>// returns a link for each section in code projects
         {
             return (
-                <section key={card.id} id={card.id} ref={element} className={clsx(card.size, "max-md:w-full md:aspect-auto h-auto relative flex flex-col p-3 transition-all duration-600", `${card.mainImage.aspect}`)} >
-                <div onClick={() =>{enlarge(card.id)}} className={clsx(card.mainImage.aspect, "w-full h-full relative overflow-hidden rounded-t-xl cursor-pointer")}>
+                <section key={card.id} id={index} ref={element} className={clsx(card.size, "max-md:w-full md:aspect-auto h-auto relative flex flex-col p-3 transition-all duration-600", `${card.mainImage.aspect}`)} >
+                <div onClick={() =>{enlarge(index)}} className={clsx(card.mainImage.aspect, "w-full h-full relative overflow-hidden rounded-t-xl cursor-pointer")}>
                     <Image
                     src={card.mainImage.src}
                     alt={card.mainImage.alt}
@@ -119,7 +129,7 @@ export default function WebCards(){
                         <h2 className="text-3xl text-balance">{card.title}</h2>
                     </div>                
                 </div>
-                <button className="hidden absolute top-4 right-6 bg-darkgrey p-3 rounded-full border-2 border-darkgreen cursor-pointer" onClick={() =>{shrink(card.id)}} >Close</button>
+                <button className="hidden absolute top-4 right-6 bg-darkgrey p-3 rounded-full border-2 border-darkgreen cursor-pointer" onClick={() =>{shrink(index)}} >Close</button>
                 <article className="hidden md:w-1/3 flex-col m-10" >
                     <h1>{card.title}</h1>
                     <h3 className="text-secondaryText mb-5">{card.subTitle}</h3>
@@ -135,7 +145,8 @@ export default function WebCards(){
                     ))}
                 </article>  
                 <ShortDescription description={card.shortDescription} tools={card.tools} />
-                <ExtendedDescription extenion={card.extenion.}  description={card.shortDescription} tools={card.tools}/>
+                <ExtendedDescription extenion={card.extenion[0].extension}  VLE={card.extenion[0].VLE}/>
+                
             </section>
             )
             }
