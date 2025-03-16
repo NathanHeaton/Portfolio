@@ -2,6 +2,25 @@ import Carousel from "../carousel"
 import Image from "next/image"
 import RoundButtonPri from "../round_buttonPri";
 
+const DNCarousel = [
+    {src : "/img/perry gaurentees.png",alt : "list of gaurentees", width : "400", height : "300"},
+    {src : "/img/PerrysFuels.png",alt : "people that are part of the business", width : "400", height : "300"},
+    {src : "/img/kennys fuel page.png",alt : "ennys fuel page", width : "400", height : "300"},
+
+]
+
+const VLECarousel = [
+    {src : "/img/persona1.png",alt : "teacher persona", width : "400", height : "300"},
+    {src : "/img/persona2.png",alt : "teacher persona", width : "400", height : "300"},
+    {src : "/img/persona3.png",alt : "teacher persona", width : "400", height : "300"},
+    {src : "/img/persona4.png",alt : "teacher persona", width : "400", height : "300"},
+    {src : "/img/persona5.png",alt : "teacher persona", width : "400", height : "300"},
+    {src : "/img/persona6.png",alt : "teacher persona", width : "400", height : "300"}
+
+
+]
+
+
 export default function ExtendedDescription({extenion, VLE, })
 {
     if (extenion)
@@ -35,7 +54,7 @@ export default function ExtendedDescription({extenion, VLE, })
                     <p>To get a better understanding of the user base and of their needs I made user personas for different types of teachers and also create a journey map outlining some 
                         tasks that a user might need to complete.</p>
                 </article>
-                    <Carousel />
+                    <Carousel images={VLECarousel} />
                 <article   className="max-w-175 flex justify-center mx-5 mb-5 md:mx-auto" >
                     <p>Students need an intuitive interface; they need to see announcements and upcoming due dates. A place to see their previous submissions 
                         and their overall grades. A place to find information about their modules and course work. <br /><br />
@@ -84,12 +103,12 @@ export default function ExtendedDescription({extenion, VLE, })
                                  new images and text that captured this essence, my employer was excited, and we began brainstorming ideas for displaying employees
                                   and determining the necessary visuals.</p>
                         </article>
-                            <Carousel />
-                          <div className="green-header-left"><h2>Design Phase</h2></div>
-                          <section className="split-align" >
-                                <article className="half">
+                            <Carousel images={DNCarousel}/>
+                          <div className="bg-darkgreen p-5 flex justify-normal my-5"><h2>Design Phase</h2></div>
+                          <section className="flex " >
+                                <article className="w-full md:w-1/2">
                                     <p>
-                                        TThe initial phase of the project revealed that DNoreilly Fuels lacked a logo,
+                                        The initial phase of the project revealed that DNoreilly Fuels lacked a logo,
                                         so I prioritized its creation. Developing a cohesive
                                         design and color scheme would establish a foundation for the rest of the website. Crafting a 
                                         logo that embodied the brand’s personality was challenging, especially as I was not highly experienced
@@ -108,13 +127,13 @@ export default function ExtendedDescription({extenion, VLE, })
                                         Further into development my employer decide to get a logo done by a professonal  logo designer, this helped me really center the design and look of the whole brand.
                                     </p>
                                 </article>
-                                <div>
+                                <div className=" w-full md:w-1/2 h-full relative mb-5 aspect-1600/628"> 
                                     <Image src="/img/DN-logo-Designs.png" alt="fuel page"  fill />
                                 </div>
                             </section>
-                            <div className="green-header-left"><h2>Development</h2></div>
-                            <section className="split-align" >
-                                <article className="half">
+                            <div className="bg-darkgreen p-5 flex justify-normal my-5"><h2>Development</h2></div>
+                            <section className="flex " >
+                                <article className="w-full md:w-1/2">
                                     <p>After thorough consideration, research, and discussions with my lecturer, I concluded that it would be best to utilise a tool
                                         for handling the e-commerce section of the website. Given my tight timeline and at the time limited web development experience,
                                         ensuring secure payment processing was paramount.
@@ -127,7 +146,7 @@ export default function ExtendedDescription({extenion, VLE, })
                                         After numerous iterations and continuous building, we launched the site, purchased the domain, and orders started to pour in.</p>
 
                                 </article>
-                                <div>
+                                <div  className=" w-1/2 h-full relative mb-5 aspect-1600/628">
                                     <Image src="/img/Dnoreillys-fulspage.png" alt="fuel page"  fill />
                                 </div>
                             </section>

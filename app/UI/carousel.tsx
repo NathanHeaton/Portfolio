@@ -1,35 +1,37 @@
 
 
-export default function Carousel()
+import Image from "next/image"
+import { useRef } from "react"
+
+export default function Carousel({images})
 {
+    const IMAGE = useRef(null);
 
+    // setInterval(() => {
+    //     if (IMAGE)
+    //     {
+    //     IMAGE.current.classlist.replace("hidden","flex");
+    //     }
+
+    // },5000)
+
+    setInterval
+    
     return(
-        <div id="carousel" className="image-center">
-            <div className="carousel-inner">
-                <div className="carousel-item active">
+        <>
+            {images.map((image, index) =>(
+                <div key={index} ref={IMAGE} className="hidden">
+                <Image src={image.src}
+                alt={image.alt}
+                width={image.width}
+                height={image.height}
+                />
+                <div className="size-5 rounded-full bg-white relative"></div>
                 </div>
-                <div className="carousel-item active">
-                </div>
-                <div className="carousel-item active">
-                </div>
-                <div className="carousel-item active">
-                </div>
-                <div className="carousel-item active">
-                </div>
-                <div className="carousel-item active">
-                </div>
+                
 
-            </div>
+            ))}
+        </>
 
-
-            <div className="carousel-indicators">
-                <span className="dot active" data-index="0"></span>
-                <span className="dot" data-index="1"></span>
-                <span className="dot" data-index="2"></span>
-                <span className="dot" data-index="3"></span>
-                <span className="dot" data-index="4"></span>
-                <span className="dot" data-index="5"></span>
-            </div>
-        </div>
         );
 }

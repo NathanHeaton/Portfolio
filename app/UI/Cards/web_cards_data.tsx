@@ -33,7 +33,7 @@ const Cards = [
         button: [{link : "/doccuments/VLE Design Report.pdf", text : "VLE Design Report.pdf" },{link : "https://www.figma.com/design/gbVMIeZDShAIkHxHYnnVOA/VLE-wireframe?node-id=0-1", text : "Figma Project" }],
         // images        
         mainImage: {src:"/img/Module page adjusted.png", alt: "VLE login page", aspect :"aspect-[19/10]"},
-        secondaryImage: [{src:"/img/Student Login page.png", alt: "VLE login page", width: 600, height : 300}],
+        secondaryImage: [],
         // for short description
         shortDescription: "SETU Y3, High fidelity Wireframes, work process for VLE UI design and UX Measurement",
         tools: "Figma, MS Forms and OBS(for user testing/recordings)",
