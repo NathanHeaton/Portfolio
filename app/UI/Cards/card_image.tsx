@@ -1,12 +1,11 @@
 import Image from "next/image";
 
 
-export default function CardImage({key, src, width, height, alt})
+export default function CardImage({src, width, height, alt})
 {
     return(
         <div className="my-5" >
         <Image 
-            key={key}
             src={src}
              alt={alt}
               width={width}

@@ -11,7 +11,6 @@ const OtherCards = [
                 <li>Use MIDI data to create a visual representation of my playing</li>
                 <li>Insight into how my playing visually changes when I am improvising, doing finger exercises, and performing or practicing songs</li>
             </ul>,
-            <h2 key={2}>Process Footnotes</h2>,
             <ul key={3}>
                 <li>Looked at other people's projects</li>
                 <li>Researched MIDI in Processing</li>

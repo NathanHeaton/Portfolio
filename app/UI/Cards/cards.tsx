@@ -8,6 +8,8 @@ import clsx from "clsx";
 import ShortDescription from "./card_short_description";
 import CardImage from "./card_image";
 import ExtendedDescription from "./extended_description";
+import { motion } from "framer-motion";
+
 
 export default function GenCards({Cards}){
 
@@ -50,13 +52,13 @@ export default function GenCards({Cards}){
             element.classList.add("bg-darkgrey", "w-full", "!min-h-[" + Cards[id].mainImage.height + "rem]");
 
 
-
-            if (m_window.innerWidth > 768) // if on desktop
+            console.log(window.innerWidth)
+            if (m_window.innerWidth > 1200) // if on desktop
             {
                 
                 if(Cards[id].extenion[0].extension)
                 {
-                    element.classList.add("flex-col");
+                    element.classList.add("flex-col")
                 }
                 else{
                     element.classList.replace("flex-col", "flex-row");
@@ -75,10 +77,11 @@ export default function GenCards({Cards}){
             console.log(element);
                     
             timeoutId = setTimeout(() => {element.scrollIntoView({ behavior: 'smooth', block: 'start' }); },600)//lets animation finish
-        
         }
 
     }
+
+    
     const shrink = (id)=>{
     {
         let element = document.getElementById(id);
@@ -107,17 +110,24 @@ export default function GenCards({Cards}){
             console.log(element);
         }
     }}
+    
     // if the user scrolls this clears the auto scroll
     window.addEventListener("scroll", () =>{
         clearTimeout(timeoutId);
     })
+
     return(
         <>
         {Cards.map((card, index) =>// returns a link for each section in code projects
         {
             return (
-                <section key={card.id} id={index} ref={element} className={clsx(card.size, "max-md:w-full md:aspect-auto h-auto relative flex flex-col p-3 transition-all duration-600", `${card.mainImage.aspect}`)} >
-                <div onClick={() =>{enlarge(index)}} className={clsx(card.mainImage.aspect, "w-full h-full relative overflow-hidden rounded-t-xl cursor-pointer")}>
+                <motion.section 
+                    {...(card.index)   &&{ whileHover : {scale: 1.05},  whileTap :{scale:0.95}}}
+                  key={card.id}
+                   id={index}
+                    ref={element}
+                     className={clsx(card.size, "max-xl:w-full md:aspect-auto h-auto relative flex flex-col p-3 transition-all duration-600", `${card.mainImage.aspect}`)} >
+                <div  onClick={() =>{enlarge(index)}} className={clsx(card.mainImage.aspect, "w-full h-full max-h-250 sl:max-w-auto relative overflow-hidden rounded-t-xl cursor-pointer")}>
                     <Image
                     src={card.mainImage.src}
                     alt={card.mainImage.alt}
@@ -130,14 +140,14 @@ export default function GenCards({Cards}){
                     </div>                
                 </div>
                 <button className="hidden absolute top-4 right-6 bg-darkgrey p-3 rounded-full border-2 border-darkgreen cursor-pointer" onClick={() =>{shrink(index)}} >Close</button>
-                <article className="hidden md:w-1/3 flex-col m-10" >
+                <article  className="hidden md:w-1/3 flex-col m-10" >
                     <h1>{card.title}</h1>
                     <h3 className="text-secondaryText mb-5">{card.subTitle}</h3>
                     <p>
                     {card.description}
                     </p>
-                    {card.button.map((button) =>( // generates for each button
-                    <RoundButtonPri href={button.link} text={button.text} />
+                    {card.button.map((button, index) =>( // generates for each button
+                    <RoundButtonPri key={index} href={button.link} text={button.text} />
                     ))}
 
                     {card.secondaryImage.map((image, index) =>( // generates for each image
@@ -147,7 +157,7 @@ export default function GenCards({Cards}){
                 <ShortDescription description={card.shortDescription} tools={card.tools} />
                 <ExtendedDescription extenion={card.extenion[0].extension}  VLE={card.extenion[0].VLE}/>
                 
-            </section>
+            </motion.section>
             )
             }
         )

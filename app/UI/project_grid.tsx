@@ -3,6 +3,7 @@
 import Link from "next/link";
 import clsx from "clsx";
 import Image from "next/image";
+import { motion } from "framer-motion";
 //import "";
 
 
@@ -21,34 +22,41 @@ export default function ProjectGrid()
 {
 
     return(
-        <section className="flex flex-col sm:flex-row xl:w-2/3 w-full h-170 p-5 gap-5">
-            <div className="flex flex-col sm:w-2/3 w-full gap-5">
-                <div className="bg-darkgrey w-full p-3 h-1/2 relative overflow-hidden rounded-xl">
-                <Image
-                    src="/img/An Phiasts Destruction.png"
-                    alt="art"
-                    width={200}
+        <section className="grid w-full h-autp p-5 gap-5 xl:w-2/3">
+
+            <motion.div
+            whileHover={{scale: 1.1}}
+             className="bg-darkgrey relative overflow-hidden rounded-xl max-h-50 sm:max-h-100 justify-center items-center sm:col-span-3">
+            <Image
+                src="/img/An Phiasts Destruction.png"
+                alt="art"
+                width={1200}
+                height={100}
+                />
+            </motion.div>
+            <motion.div
+            whileHover={{scale: 1.1}}
+             className="bg-darkgrey relative overflow-hidden max-h-50 md:max-h-max rounded-xl">
+
+            <Image
+                    src="/img/dnoreillys-website.PNG"
+                    alt="fuels website"
+                    width={1200}
                     height={100}
-                    />
-                </div>
-                <div className="bg-darkgrey w-full p-3 h-1/2 size-10 relative overflow-hidden rounded-xl">
-                <Image
-                        src="/img/dnoreillys-website.PNG"
-                        alt="fuels website"
-                        width={200}
-                        height={100}
-                        
-                    />
-                </div>
-            </div>
-            <div className="bg-darkgrey sm:w-1/3 w-full p-3 h-full relative overflow-hidden rounded-xl">
+                    className="relative"
+                    
+                />
+            </motion.div>
+            <motion.div
+whileHover={{scale: 1.1}}
+             className="bg-darkgrey  relative overflow-hidden max-h-50 md:max-h-max rounded-xl">
             <Image
                     src="/img/cat and rat game end screen.PNG"
                     alt="cat art"
-                                        width={200}
+                                        width={1200}
                     height={100}
                  />
-            </div>
+            </motion.div>
 
         
         </section>

@@ -20,7 +20,7 @@ export default function ArtLayout({
     <ArtNav></ArtNav>
 </nav>
 
-<main className="w-full flex justify-center max-w-400px md:w-5/6">
+<main className="w-full flex justify-center max-w-400">
 <section className="w-full flex flex-row flex-wrap">
         {children}
     </section>

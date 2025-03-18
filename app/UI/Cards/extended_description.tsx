@@ -89,7 +89,7 @@ export default function ExtendedDescription({extenion, VLE, })
             {
             return(
                 <section className="hidden flex-col w-full">
-                        <div className="bg-darkgreen p-5 flex justify-center my-5"><h2>Research & Planing</h2></div>
+                        <div className="bg-darkgreen p-5 flex justify-center my-5"><h1>Research & Planing</h1></div>
                         <article   className="max-w-175 flex justify-center mx-5 mb-5 md:mx-auto" >
                             
                             <p>The project began with extensive market research, focusing on fuel websites in Ireland. Initially, I examined major brands like 
@@ -104,10 +104,10 @@ export default function ExtendedDescription({extenion, VLE, })
                                   and determining the necessary visuals.</p>
                         </article>
                             <Carousel images={DNCarousel}/>
-                          <div className="bg-darkgreen p-5 flex justify-normal my-5"><h2>Design Phase</h2></div>
+                          <div className="bg-darkgreen p-5 flex justify-normal my-5"><h1>Design Phase</h1></div>
                           <section className="flex " >
                                 <article className="w-full md:w-1/2">
-                                    <p>
+                                    <p className="max-w-175 px-7">
                                         The initial phase of the project revealed that DNoreilly Fuels lacked a logo,
                                         so I prioritized its creation. Developing a cohesive
                                         design and color scheme would establish a foundation for the rest of the website. Crafting a 
@@ -131,10 +131,10 @@ export default function ExtendedDescription({extenion, VLE, })
                                     <Image src="/img/DN-logo-Designs.png" alt="fuel page"  fill />
                                 </div>
                             </section>
-                            <div className="bg-darkgreen p-5 flex justify-normal my-5"><h2>Development</h2></div>
-                            <section className="flex " >
-                                <article className="w-full md:w-1/2">
-                                    <p>After thorough consideration, research, and discussions with my lecturer, I concluded that it would be best to utilise a tool
+                            <div className="bg-darkgreen p-5 flex justify-normal my-5"><h1>Development</h1></div>
+                            <section className="flex mb-20 flex-col md:flex-row" >
+                                <article className="w-full md:w-1/2 ">
+                                    <p className="max-w-175 px-7">After thorough consideration, research, and discussions with my lecturer, I concluded that it would be best to utilise a tool
                                         for handling the e-commerce section of the website. Given my tight timeline and at the time limited web development experience,
                                         ensuring secure payment processing was paramount.
                                         <br /><br />
@@ -150,7 +150,7 @@ export default function ExtendedDescription({extenion, VLE, })
                                     <Image src="/img/Dnoreillys-fulspage.png" alt="fuel page"  fill />
                                 </div>
                             </section>
-                            <div className="bg-darkgreen p-5 flex justify-center my-5"><h2>Reflection</h2></div>
+                            <div className="bg-darkgreen p-5 flex justify-center my-5"><h1>Reflection</h1></div>
                             <article   className="max-w-175 flex justify-center mx-5 mb-5 md:mx-auto" >
                         
                               <p>This project was a significant opportunity that allowed me to design and develop a commercial product, providing me with invaluable insights into the business landscape 
