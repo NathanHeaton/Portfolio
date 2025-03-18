@@ -86,9 +86,9 @@ const DigitalArtCards : {id : string, size : string, title : string, subTitle : 
                 "My end-of-year project for first year, Cat and Rat. This game is about shooting rats and mice before they get to the cheese. All of the art assets were made in Aseprite, and I coded the game in C++ using the SFML library."
             ],
             button: [],
-            mainImage: { src: "/art/menu.png", alt: "home screen for cat game", aspect: "aspect-[5/3]" },
+            mainImage: { src: "/img/menu.png", alt: "home screen for cat game", aspect: "aspect-[5/3]" },
             secondaryImage: [
-                { src: "/art/cat and rat game end screen.PNG", alt: "end screen", width: 600, height: 300 },
+                { src: "/img/cat and rat game end screen.PNG", alt: "end screen", width: 600, height: 300 },
                 { src: "/art/cat_Player1.png", alt: "cat player spritesheet", width: 600, height: 300 },
                 { src: "/art/Mouse_enemy1.png", alt: "mouse enemy spritesheet", width: 300, height: 300 },
                 { src: "/art/rat_enemy-Sheet.png", alt: "rat enemy spritesheet", width: 300, height: 300 }

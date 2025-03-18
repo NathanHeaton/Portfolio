@@ -75,7 +75,7 @@ export default function GenCards({Cards} : GenCardsProps){
             let extenion = element.querySelectorAll("section")[1];
 
             element.classList.remove(Cards[id].size, "h-auto");
-            element.classList.add("bg-darkgrey", "w-full", "!min-h-[" + Cards[id].mainImage.height + "rem]");
+            element.classList.add("bg-darkgrey", "w-full");
 
 
             console.log(window.innerWidth)

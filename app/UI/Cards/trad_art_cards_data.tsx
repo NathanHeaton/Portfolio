@@ -1,6 +1,10 @@
 const TradArtCards: {id : string, size : string, title : string, subTitle : string,
-    description : any ,
-     button : any,
+    description : [
+        string,
+    ] | any ,
+     button : [
+
+     ] | any ,
     mainImage : {src : string, alt : string, aspect: string},
     secondaryImage : {src : string, alt : string, width: number, height : number}[],
     shortDescription : string,

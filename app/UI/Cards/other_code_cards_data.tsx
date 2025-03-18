@@ -14,20 +14,16 @@ const OtherCards : {id : string, size : string, title : string, subTitle : strin
         title: "Data Self Portrait",
         subTitle: "SETU",
         description: [
-            "In this project, we are tasked with creating a visualization of data from our lives. I decided to base it on data from my electronic piano.",
-            <ul key={1}>
-                <li>Record full MIDI sessions of my playing for 22 days</li>
-                <li>Use MIDI data to create a visual representation of my playing</li>
-                <li>Insight into how my playing visually changes when I am improvising, doing finger exercises, and performing or practicing songs</li>
-            </ul>,
-            <ul key={3}>
-                <li>Looked at other people's projects</li>
-                <li>Researched MIDI in Processing</li>
-                <li>Got basic playback working</li>
-                <li>Struggled to read Java documentation</li>
-                <li>Used AI to rework my code and get MIDI messages</li>
-                <li>Coded all the bouncing notes, track selection, and tried to fix file bugs</li>
-            </ul>,
+            "In this project, we are tasked with creating a visualization of data from our lives. I decided to base it on data from my electronic piano.",<br />,<br />,
+            "Record full MIDI sessions of my playing for 22 days",<br />,
+            "Use MIDI data to create a visual representation of my playing",<br />,
+            "Insight into how my playing visually changes when I am improvising, doing finger exercises, and performing or practicing songs",<br />,
+            "Looked at other people's projects",<br />,<br />,
+            "Researched MIDI in Processing",<br />,
+            "Got basic playback working",<br />,
+            "Struggled to read Java documentation",<br />,
+            "Used AI to rework my code and get MIDI messages",<br />,
+            "Coded all the bouncing notes, track selection, and tried to fix file bugs",<br />,
             "Github repo below:"
         ],
         button: [{ link: "https://github.com/NathanHeaton/Data-Self-Portrait.git", text: "Repo" }],
