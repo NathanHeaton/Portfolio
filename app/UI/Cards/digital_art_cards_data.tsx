@@ -1,5 +1,14 @@
 
-const DigitalArtCards = [
+const DigitalArtCards : {id : string, size : string, title : string, subTitle : string,
+    description : any ,
+     button : any,
+    mainImage : {src : string, alt : string, aspect: string},
+    secondaryImage : {src : string, alt : string, width: number, height : number}[],
+    shortDescription : string,
+    tools : string,
+    extension : {extension : boolean, VLE : boolean}[]
+   
+   }[] = [
         {
             id: "17",
             size: "w-2/3",
@@ -16,7 +25,7 @@ const DigitalArtCards = [
             ],
             shortDescription: "Concept landscape for Strow civilisation",
             tools: "Adobe Photoshop",
-            extenion: [{ extension: false, VLE: false }]
+            extension: [{ extension: false, VLE: false }]
         },
         {
             id: "18",
@@ -33,7 +42,7 @@ const DigitalArtCards = [
             ],
             shortDescription: "Digital portraits",
             tools: "Adobe Photoshop",
-            extenion: [{ extension: false, VLE: false }]
+            extension: [{ extension: false, VLE: false }]
         },
         {
             id: "19",
@@ -51,7 +60,7 @@ const DigitalArtCards = [
             ],
             shortDescription: "Character turnaround and rig",
             tools: "Adobe Photoshop, Spine",
-            extenion: [{ extension: false, VLE: false }]
+            extension: [{ extension: false, VLE: false }]
         },
         {
             id: "20",
@@ -66,7 +75,7 @@ const DigitalArtCards = [
             secondaryImage: [],
             shortDescription: "Pixel Art Flowers first-year assignment",
             tools: "Aseprite",
-            extenion: [{ extension: false, VLE: false }]
+            extension: [{ extension: false, VLE: false }]
         },
         {
             id: "21",
@@ -86,7 +95,7 @@ const DigitalArtCards = [
             ],
             shortDescription: "Game spritesheet",
             tools: "Aseprite",
-            extenion: [{ extension: false, VLE: false }]
+            extension: [{ extension: false, VLE: false }]
         },
         {
             id: "22",
@@ -101,7 +110,7 @@ const DigitalArtCards = [
             secondaryImage: [],
             shortDescription: "Heli sprite for Heli-Shooter",
             tools: "Aseprite",
-            extenion: [{ extension: false, VLE: false }]
+            extension: [{ extension: false, VLE: false }]
         },
         {
             id: "23",
@@ -119,7 +128,7 @@ const DigitalArtCards = [
             ],
             shortDescription: "Character in an action pose",
             tools: "Adobe Photoshop",
-            extenion: [{ extension: false, VLE: false }]
+            extension: [{ extension: false, VLE: false }]
         }
     
 

@@ -20,10 +20,16 @@ const VLECarousel = [
 
 ]
 
+type types = {
+    extension : boolean;
+    VLE : boolean;
 
-export default function ExtendedDescription({extenion, VLE, })
+}
+
+
+export default function ExtendedDescription({extension, VLE} : types)
 {
-    if (extenion)
+    if (extension)
     {
         if (VLE)
         {        

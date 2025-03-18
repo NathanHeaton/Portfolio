@@ -1,6 +1,10 @@
 
+type types = {
+    href : string;
+    text : string;
+}
 
-export default function RoundButtonSec({href, text})
+export default function RoundButtonSec({href, text} : types)
 {
     return(
         <a

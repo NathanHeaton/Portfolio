@@ -1,4 +1,13 @@
-const TradArtCards = [
+const TradArtCards: {id : string, size : string, title : string, subTitle : string,
+    description : any ,
+     button : any,
+    mainImage : {src : string, alt : string, aspect: string},
+    secondaryImage : {src : string, alt : string, width: number, height : number}[],
+    shortDescription : string,
+    tools : string,
+    extension : {extension : boolean, VLE : boolean}[]
+   
+   }[] = [
     {
         id: "24",
         size: "w-1/2",
@@ -10,7 +19,7 @@ const TradArtCards = [
         secondaryImage: [],
         shortDescription: "Pencil drawing of a woman",
         tools: "B6 to HB pencils, tortillon, and eraser",
-        extenion: [{ extension: false, VLE: false }]
+        extension: [{ extension: false, VLE: false }]
     },
     {
         id: "25",
@@ -25,7 +34,7 @@ const TradArtCards = [
         secondaryImage: [],
         shortDescription: "Realistic study of a person",
         tools: "B6 to HB pencils, tortillon, and eraser",
-        extenion: [{ extension: false, VLE: false }]
+        extension: [{ extension: false, VLE: false }]
     },
     {
         id: "26",
@@ -40,7 +49,7 @@ const TradArtCards = [
         secondaryImage: [],
         shortDescription: "Ceramic building based on the Hungarian parliament",
         tools: "Slab pottery tools",
-        extenion: [{ extension: false, VLE: false }]
+        extension: [{ extension: false, VLE: false }]
     },
     {
         id: "27",
@@ -55,7 +64,7 @@ const TradArtCards = [
         secondaryImage: [],
         shortDescription: "Realistic study of a person",
         tools: "B6 to HB pencils, tortillon, and eraser",
-        extenion: [{ extension: false, VLE: false }]
+        extension: [{ extension: false, VLE: false }]
     },
     {
         id: "28",
@@ -73,7 +82,7 @@ const TradArtCards = [
         ],
         shortDescription: "Realistic study of sports cars",
         tools: "B6 to HB pencils, tortillon, and eraser",
-        extenion: [{ extension: false, VLE: false }]
+        extension: [{ extension: false, VLE: false }]
     },
     {
         id: "29",
@@ -90,7 +99,7 @@ const TradArtCards = [
         ],
         shortDescription: "Realistic study of people",
         tools: "B6 to HB pencils, tortillon, and eraser",
-        extenion: [{ extension: false, VLE: false }]
+        extension: [{ extension: false, VLE: false }]
     },
     {
         id: "30",
@@ -105,7 +114,7 @@ const TradArtCards = [
         secondaryImage: [],
         shortDescription: "Painting of my electric guitar",
         tools: "B6 to HB pencils, acrylic paint",
-        extenion: [{ extension: false, VLE: false }]
+        extension: [{ extension: false, VLE: false }]
     },
     {
         id: "31",
@@ -120,7 +129,7 @@ const TradArtCards = [
         secondaryImage: [],
         shortDescription: "Johnny Silverhand from Cyberpunk 2077",
         tools: "Charcoal pencils, tortillon, and eraser",
-        extenion: [{ extension: false, VLE: false }]
+        extension: [{ extension: false, VLE: false }]
     },
     {
         id: "32",
@@ -135,7 +144,7 @@ const TradArtCards = [
         secondaryImage: [],
         shortDescription: "Arthur Morgan from Red Dead Redemption 2",
         tools: "B6 to HB pencils, tortillon, and eraser",
-        extenion: [{ extension: false, VLE: false }]
+        extension: [{ extension: false, VLE: false }]
     }
 ];
 

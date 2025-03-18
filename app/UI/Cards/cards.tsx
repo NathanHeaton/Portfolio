@@ -11,20 +11,46 @@ import ExtendedDescription from "./extended_description";
 import { motion } from "framer-motion";
 
 
-export default function GenCards({Cards}){
+interface types {id : string;
+    size : string;
+     title : string;
+      subTitle : string;
+    description : any ;
+    button: {
+        link: string;
+        text: string;
+      }[];
+    mainImage : {src : string;
+         alt : string;
+          aspect: string};
+    secondaryImage : {src : string;
+         alt : string;
+          width: number;
+           height : number}[];
+    shortDescription : string;
+    tools : string;
+    extension : {extension : boolean; VLE : boolean}[]
+   
+   };
+
+   interface GenCardsProps {
+    Cards: types[];
+  }
+
+export default function GenCards({Cards} : GenCardsProps){
 
     const [open, setenlarged] = useState({});
     const element = useRef(null);
 
-    let prevCard = null;
-    let timeoutId = null;
+    let prevCard : number | null = null;
+    let timeoutId : ReturnType<typeof setTimeout> | null = null;
 
     const useEffect = () =>{}
 
 
     const m_window = window; // assign window because function won't see it not sure why
 
-    const enlarge = (id)=>{
+    const enlarge = (id:number)=>{
 
         if(prevCard) shrink(prevCard);
 
@@ -37,7 +63,7 @@ export default function GenCards({Cards}){
 
         prevCard = id;
 
-        let element = document.getElementById(id);
+        let element = document.getElementById(""+id+"");
 
         if (element)
         {
@@ -56,7 +82,7 @@ export default function GenCards({Cards}){
             if (m_window.innerWidth > 1200) // if on desktop
             {
                 
-                if(Cards[id].extenion[0].extension)
+                if(Cards[id].extension[0].extension)
                 {
                     element.classList.add("flex-col")
                 }
@@ -82,9 +108,9 @@ export default function GenCards({Cards}){
     }
 
     
-    const shrink = (id)=>{
+    const shrink = (id : number)=>{
     {
-        let element = document.getElementById(id);
+        let element = document.getElementById(""+id+"");
 
         if (element)
         {
@@ -113,18 +139,19 @@ export default function GenCards({Cards}){
     
     // if the user scrolls this clears the auto scroll
     window.addEventListener("scroll", () =>{
+        if (timeoutId)
         clearTimeout(timeoutId);
     })
 
     return(
         <>
-        {Cards.map((card, index) =>// returns a link for each section in code projects
+        {Cards.map((card, index : number) =>// returns a link for each section in code projects
         {
             return (
                 <motion.section 
-                    {...(card.index)   &&{ whileHover : {scale: 1.05},  whileTap :{scale:0.95}}}
+                    //{...()   &&{ whileHover : {scale: 1.05},  whileTap :{scale:0.95}}}
                   key={card.id}
-                   id={index}
+                   id={""+index+""}
                     ref={element}
                      className={clsx(card.size, "max-xl:w-full md:aspect-auto h-auto relative flex flex-col p-3 transition-all duration-600", `${card.mainImage.aspect}`)} >
                 <div  onClick={() =>{enlarge(index)}} className={clsx(card.mainImage.aspect, "w-full h-full max-h-250 sl:max-w-auto relative overflow-hidden rounded-t-xl cursor-pointer")}>
@@ -146,16 +173,16 @@ export default function GenCards({Cards}){
                     <p>
                     {card.description}
                     </p>
-                    {card.button.map((button, index) =>( // generates for each button
+                    {card.button.map((button, index : number) =>( // generates for each button
                     <RoundButtonPri key={index} href={button.link} text={button.text} />
                     ))}
 
-                    {card.secondaryImage.map((image, index) =>( // generates for each image
+                    {card.secondaryImage.map((image, index : number) =>( // generates for each image
                     <CardImage key={index} src={image.src} alt={image.alt} height={image.height} width={image.width} />
                     ))}
                 </article>  
                 <ShortDescription description={card.shortDescription} tools={card.tools} />
-                <ExtendedDescription extenion={card.extenion[0].extension}  VLE={card.extenion[0].VLE}/>
+                <ExtendedDescription extension={card.extension[0].extension}  VLE={card.extension[0].VLE}/>
                 
             </motion.section>
             )

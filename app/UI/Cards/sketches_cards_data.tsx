@@ -1,5 +1,14 @@
 
-const SketchesCards = [
+const SketchesCards : {id : string, size : string, title : string, subTitle : string,
+    description : any ,
+     button : any,
+    mainImage : {src : string, alt : string, aspect: string},
+    secondaryImage : {src : string, alt : string, width: number, height : number}[],
+    shortDescription : string,
+    tools : string,
+    extension : {extension : boolean, VLE : boolean}[]
+   
+   }[] = [
     {
         id: "35",
         size: "w-1/3",
@@ -15,7 +24,7 @@ const SketchesCards = [
         ],
         shortDescription: "Sketches of action poses",
         tools: "Pencil and paper",
-        extenion: [{ extension: false, VLE: false }]
+        extension: [{ extension: false, VLE: false }]
     },
     {
         id: "36",
@@ -30,7 +39,7 @@ const SketchesCards = [
         secondaryImage: [],
         shortDescription: "Anatomy sketches of male figures",
         tools: "Pencil and paper",
-        extenion: [{ extension: false, VLE: false }]
+        extension: [{ extension: false, VLE: false }]
     },
     {
         id: "37",
@@ -45,7 +54,7 @@ const SketchesCards = [
         secondaryImage: [],
         shortDescription: "Anatomy sketches of female figures",
         tools: "Pencil and paper",
-        extenion: [{ extension: false, VLE: false }]
+        extension: [{ extension: false, VLE: false }]
     },
     {
         id: "38",
@@ -60,7 +69,7 @@ const SketchesCards = [
         secondaryImage: [],
         shortDescription: "Quick sketches of animals",
         tools: "Pencil and paper",
-        extenion: [{ extension: false, VLE: false }]
+        extension: [{ extension: false, VLE: false }]
     },
     {
         id: "39",
@@ -75,7 +84,7 @@ const SketchesCards = [
         secondaryImage: [],
         shortDescription: "Quick sketches of animals",
         tools: "Pencil and paper",
-        extenion: [{ extension: false, VLE: false }]
+        extension: [{ extension: false, VLE: false }]
     },
     {
         id: "40",
@@ -90,7 +99,7 @@ const SketchesCards = [
         secondaryImage: [],
         shortDescription: "Quick sketches of animals",
         tools: "Pencil and paper",
-        extenion: [{ extension: false, VLE: false }]
+        extension: [{ extension: false, VLE: false }]
     },
     {
         id: "41",
@@ -105,7 +114,7 @@ const SketchesCards = [
         secondaryImage: [],
         shortDescription: "Quick sketches of animals",
         tools: "Pencil and paper",
-        extenion: [{ extension: false, VLE: false }]
+        extension: [{ extension: false, VLE: false }]
     }
 ];
 

@@ -1,4 +1,13 @@
-const OtherCards = [
+const OtherCards : {id : string, size : string, title : string, subTitle : string,
+    description : any ,
+     button : any,
+    mainImage : {src : string, alt : string, aspect: string},
+    secondaryImage : {src : string, alt : string, width: number, height : number}[],
+    shortDescription : string,
+    tools : string,
+    extension : {extension : boolean, VLE : boolean}[]
+   
+   }[] = [
     {
         id: "43",
         size: "w-1/3",
@@ -28,7 +37,7 @@ const OtherCards = [
         ],
         shortDescription: "SETU Y3, audio visualizer",
         tools: "Processing (Java) and Adobe Photoshop",
-        extenion: [{ extension: false, VLE: false }]
+        extension: [{ extension: false, VLE: false }]
     },
     {
         id: "44",
@@ -47,7 +56,7 @@ const OtherCards = [
         ],
         shortDescription: "SETU Y2, wireframes for to-do list app",
         tools: "Penpot (wireframing)",
-        extenion: [{ extension: false, VLE: false }]
+        extension: [{ extension: false, VLE: false }]
     }
 ];
 

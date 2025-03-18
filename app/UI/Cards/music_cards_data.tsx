@@ -1,4 +1,13 @@
-const MusicCards = [
+const MusicCards : {id : string, size : string, title : string, subTitle : string,
+    description : any ,
+     button : any,
+    mainImage : {src : string, alt : string, aspect: string},
+    secondaryImage : {src : string, alt : string, width: number, height : number}[],
+    shortDescription : string,
+    tools : string,
+    extension : {extension : boolean, VLE : boolean}[]
+   
+   }[] = [
     {
         id: "42",
         size: "w-1/3",
@@ -12,7 +21,7 @@ const MusicCards = [
         secondaryImage: [],
         shortDescription: "Link to my Soundcloud profile",
         tools: "Soundcloud",
-        extenion: [{ extension: false, VLE: false }]
+        extension: [{ extension: false, VLE: false }]
     }
 ];
 

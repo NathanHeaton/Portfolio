@@ -1,7 +1,11 @@
 
 
+type types ={
+    description : string;
+    tools : string;
+}   
 
-export default function ShortDescription({description, tools})
+export default function ShortDescription({description , tools} : types)
 {
     return(
     <section className="bg-darkgrey flex rounded-b-xl">

@@ -1,4 +1,13 @@
-const ThreeDArtCards = [
+const ThreeDArtCards : {id : string, size : string, title : string, subTitle : string,
+    description : any ,
+     button : any,
+    mainImage : {src : string, alt : string, aspect: string},
+    secondaryImage : {src : string, alt : string, width: number, height : number}[],
+    shortDescription : string,
+    tools : string,
+    extension : {extension : boolean, VLE : boolean}[]
+   
+   }[] = [
     {
         id: "33",
         size: "w-1/2",
@@ -12,7 +21,7 @@ const ThreeDArtCards = [
         secondaryImage: [],
         shortDescription: "3D model of a donut made in Blender",
         tools: "Blender",
-        extenion: [{ extension: false, VLE: false }]
+        extension: [{ extension: false, VLE: false }]
     },
     {
         id: "34",
@@ -27,7 +36,7 @@ const ThreeDArtCards = [
         secondaryImage: [],
         shortDescription: "3D model of a coffee cup made in Blender",
         tools: "Blender",
-        extenion: [{ extension: false, VLE: false }]
+        extension: [{ extension: false, VLE: false }]
     }
 ];
 

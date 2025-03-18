@@ -1,7 +1,16 @@
 
 
 
-const Cards = [
+const WebCards : {id : string, size : string, title : string, subTitle : string,
+   description : any ,
+    button : any,
+   mainImage : {src : string, alt : string, aspect: string},
+   secondaryImage : {src : string, alt : string, width: number, height : number}[],
+   shortDescription : string,
+   tools : string,
+   extension : {extension : boolean, VLE : boolean}[]
+  
+  }[] = [
     {
         id: "0",
         size: "w-1/3",
@@ -20,7 +29,7 @@ const Cards = [
         // for short description
         shortDescription: "SETU Y3, Unconventional clock, based on flowers",
         tools: " HTML, CSS, JS, Aseprite and Adobe Photoshop",
-        extenion: [{extension : false,VLE : false}]
+        extension: [{extension : false,VLE : false}]
 
     },
     {
@@ -38,7 +47,7 @@ const Cards = [
         shortDescription: "SETU Y3, High fidelity Wireframes, work process for VLE UI design and UX Measurement",
         tools: "Figma, MS Forms and OBS(for user testing/recordings)",
 
-        extenion: [{extension : true , VLE : true}]// add rest of info
+        extension: [{extension : true , VLE : true}]// add rest of info
 
     },
     {
@@ -55,7 +64,7 @@ const Cards = [
         // for short description
         shortDescription: "Commission 2024, Website for a band in Dublin",
         tools: "Penpot(wireframing), HTML, CSS and JS",
-        extenion: [{extension : false,VLE : false}]
+        extension: [{extension : false,VLE : false}]
 
     },
     {
@@ -75,7 +84,7 @@ const Cards = [
       // for short description
       shortDescription: "Commission 2024, Website for a band in Dublin",
       tools: "Penpot(wireframing), HTML, CSS and JS",
-      extenion: [{extension : false , VLE : false}]
+      extension: [{extension : false , VLE : false}]
 
   },
   {
@@ -94,7 +103,7 @@ const Cards = [
     secondaryImage: [],
     shortDescription: "Commission, D&N O'Reilly Solidfuels & Timber web design & development",
     tools: "Inkscape (wireframing), Shopify, CSS",
-    extenion: [{ extension: true, VLE: false }]
+    extension: [{ extension: true, VLE: false }]
   },
   {
       id: "4",
@@ -119,7 +128,7 @@ const Cards = [
       mainImage: { src: "/img/porfolio-page-mobile.png", alt: "Portfolio mobile page", aspect: "aspect-[3/4]" },
       secondaryImage: [{ src: "/img/codeprojects-showcase.png", alt: "Showcase of my code projects", width: 600, height: 300 }],
       tools: 'HTML, CSS, JavaScript, Penpot, Inkscape, Adobe Photoshop',
-      extenion: [{extension : false , VLE : false}]
+      extension: [{extension : false , VLE : false}]
     },
     {
       id: "5",
@@ -136,7 +145,7 @@ const Cards = [
       mainImage: { src: "/img/USAP redesign.PNG", alt: "USAP redesign wireframe", aspect: "aspect-[5/3]" },
       secondaryImage: [{ src: "/img/USAP wire1.png", alt: "USAP wireframe design", width: 600, height: 300 }],
       tools: 'Inkscape(wireframing)',
-      extenion: [{extension : false , VLE : false}]
+      extension: [{extension : false , VLE : false}]
     },
     {
       id: "6",
@@ -153,7 +162,7 @@ const Cards = [
       mainImage: { src: "/img/Riverside Takeaway Website.png", alt: "Riverside Takeaway website design", aspect: "aspect-[5/3]" },
       secondaryImage: [{ src: "/img/Riverside basket.png", alt: "Riverside basket display", width: 600, height: 300 }],
       tools: 'WordPress, SQL, Adobe Photoshop',
-      extenion: [{extension : false , VLE : false}]
+      extension: [{extension : false , VLE : false}]
     },
     {
       id: "7",
@@ -170,7 +179,7 @@ const Cards = [
       mainImage: { src: "/img/Escape from time gameplay.PNG", alt: "Escape from Time gameplay", aspect: "aspect-[5/3]" },
       secondaryImage: [{ src: "/img/Escape from time options.PNG", alt: "Escape from Time options menu", width: 600, height: 300 }],
       tools: 'HTML, CSS, JavaScript, Aseprite',
-      extenion: [{extension : false , VLE : false}]
+      extension: [{extension : false , VLE : false}]
     },
     {
       id: "8",
@@ -186,10 +195,10 @@ const Cards = [
       mainImage: { src: "/img/band-website.PNG", alt: "Band Promotion website design", aspect: "aspect-[5/3]" },
       secondaryImage: [{ src: "/img/band-website-carousel1.png", alt: "Band Promotion carousel", width: 600, height: 300 }],
       tools: 'HTML, CSS, JavaScript',
-      extenion: [{extension : false , VLE : false}]
+      extension: [{extension : false , VLE : false}]
     },
   
     
 ]
 
-export default Cards;
+export default WebCards;

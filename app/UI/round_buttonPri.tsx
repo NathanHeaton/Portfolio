@@ -1,5 +1,10 @@
 
-export default function RoundButtonPri({href, text})
+type types = {
+    href : string;
+    text : string;
+}
+
+export default function RoundButtonPri({href, text} : types)
 {
     return(
         <a

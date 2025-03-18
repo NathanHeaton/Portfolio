@@ -1,6 +1,14 @@
 
-const GameCards =
-[
+const GameCards : {id : string, size : string, title : string, subTitle : string,
+    description : any ,
+     button : any,
+    mainImage : {src : string, alt : string, aspect: string},
+    secondaryImage : {src : string, alt : string, width: number, height : number}[],
+    shortDescription : string,
+    tools : string,
+    extension : {extension : boolean, VLE : boolean}[]
+   
+   }[] = [
         {
             id: "9",
             size: "w-1/3",
@@ -18,7 +26,7 @@ const GameCards =
             secondaryImage: [{ src: "/img/golden duel weapons.png", alt: "weapons for Golden-Duel", width: 600, height: 250 }],
             shortDescription: "SETU Y3, Game Concept about dueling with weapons using only one button",
             tools: "Figma and Adobe Photoshop",
-            extenion: [{ extension: false, VLE: false }]
+            extension: [{ extension: false, VLE: false }]
         },
         {
             id: "10",
@@ -43,7 +51,7 @@ const GameCards =
             ],
             shortDescription: "SETU Y3, Game about surviving waves of enemies and general destruction",
             tools: "Godot and FL Studio",
-            extenion: [{ extension: false, VLE: false }]
+            extension: [{ extension: false, VLE: false }]
         },
         {
             id: "11",
@@ -70,7 +78,7 @@ const GameCards =
             ],
             shortDescription: "SETU Y3, Game about fishing for a monster",
             tools: "HTML, CSS, JS and Adobe Photoshop",
-            extenion: [{ extension: false, VLE: false }]
+            extension: [{ extension: false, VLE: false }]
         },
         {
             id: "12",
@@ -90,7 +98,7 @@ const GameCards =
             ],
             shortDescription: "SETU Y1, Group project, bullet hell with slow time mechanic",
             tools: "C++, SFML, Adobe Photoshop and FL Studio",
-            extenion: [{ extension: false, VLE: false }]
+            extension: [{ extension: false, VLE: false }]
         },
         {
             id: "13",
@@ -110,7 +118,7 @@ const GameCards =
             ],
             shortDescription: "SETU Y2, Game about time travel made using JS.",
             tools: "HTML, CSS, JS and Aseprite",
-            extenion: [{ extension: false, VLE: false }]
+            extension: [{ extension: false, VLE: false }]
         },
         {
             id: "14",
@@ -132,7 +140,7 @@ const GameCards =
             ],
             shortDescription: "SETU Y1, Game about protecting cheese from rodents",
             tools: "C++, SFML and Aseprite",
-            extenion: [{ extension: false, VLE: false }]
+            extension: [{ extension: false, VLE: false }]
         },
         {
             id: "15",
@@ -149,7 +157,7 @@ const GameCards =
             secondaryImage: [{ src: "/img/Heli-shooter home screen.PNG", alt: "home screen", width: 600, height: 250 }],
             shortDescription: "SETU Y1, Game about shooting targets that spawn randomly",
             tools: "C++, SFML and Aseprite",
-            extenion: [{ extension: false, VLE: false }]
+            extension: [{ extension: false, VLE: false }]
         },
         {
             id: "16",
@@ -166,7 +174,7 @@ const GameCards =
             secondaryImage: [],
             shortDescription: "Personal, Game about growing a fish big.",
             tools: "C++, SFML and Aseprite",
-            extenion: [{ extension: false, VLE: false }]
+            extension: [{ extension: false, VLE: false }]
         }
     ];
 
