@@ -1,4 +1,4 @@
-import MusicCards from "../UI/Cards/music_cards_data";
+import MusicCards from "../UI/Cards/Data/music_cards_data";
 import GenCards from "../UI/Cards/cards";
 
 export default function Page(){    

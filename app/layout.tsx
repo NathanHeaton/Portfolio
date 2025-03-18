@@ -3,6 +3,7 @@ import { Alegreya, Tilt_Warp} from "next/font/google";
 import NavLink from "@/app/UI/nav_links"
 import Link from "next/link";
 import MouseEffect from "./components/mouseEffect";
+import { AnimatePresence, motion } from "framer-motion";
 
 import "./globals.css";
 import FooterLink from "./UI/footer_links";
@@ -62,7 +63,17 @@ export default function RootLayout({
             </nav>
    
         </header>
+        {/* <AnimatePresence mode="wait">
+          <motion.div
+            key={pathname}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4 }}
+          > */}
         {children}
+        {/* </motion.div>
+        </AnimatePresence> */}
         <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center mt-20 bg-darkgrey">
         <section>
                 <div className="md:flex row-auto p-10">

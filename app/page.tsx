@@ -1,7 +1,7 @@
 import Image from "next/image";
 import ToolsShowcase from "./components/toolsShowcase";
 import ProjectGrid from "./UI/project_grid";
-import { motion } from "framer-motion";
+
 import SquareButtons from "./UI/square_buttons";
 import RoundButtonPri from "./UI/round_buttonPri";
 import RoundButtonSec from "./UI/round_buttonSec";
