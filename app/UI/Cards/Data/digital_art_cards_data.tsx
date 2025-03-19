@@ -129,6 +129,23 @@ const DigitalArtCards : {id : string, size : string, title : string, subTitle : 
             shortDescription: "Character in an action pose",
             tools: "Adobe Photoshop",
             extension: [{ extension: false, VLE: false }]
+        },
+        {
+            id: "24",
+            size: "w-1/3",
+            title: "Photoshop Portraits",
+            subTitle: "Personal",
+            description: [
+                "Digital portraits over the summer 2024, I used Pinterest to find references."
+            ],
+            button: [],
+            mainImage: { src: "/art/Digital portrait 1.png", alt: "woman digital art, with white outline ", aspect: "aspect-[3/4]" },
+            secondaryImage: [
+
+            ],
+            shortDescription: "woman digital art",
+            tools: "Adobe Photoshop",
+            extension: [{ extension: false, VLE: false }]
         }
     
 

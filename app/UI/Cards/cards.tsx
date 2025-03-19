@@ -102,7 +102,7 @@ export default function GenCards({Cards} : GenCardsProps){
 
             console.log(element);
                     
-            timeoutId = setTimeout(() => {element.scrollIntoView({ behavior: 'smooth', block: 'start' }); },600)//lets animation finish
+            timeoutId = setTimeout(() => {element.scrollIntoView({ behavior: 'smooth', block: 'start' }); },200)//lets animation finish
         }
 
     }
@@ -153,7 +153,7 @@ export default function GenCards({Cards} : GenCardsProps){
                   key={card.id}
                    id={""+index+""}
                     ref={element}
-                     className={clsx(card.size, "max-xl:w-full md:aspect-auto h-auto relative flex flex-col p-3 transition-all duration-600", `${card.mainImage.aspect}`)} >
+                     className={clsx(card.size, "max-xl:w-full md:aspect-auto h-auto relative flex flex-col p-3 transition-all duration-200", `${card.mainImage.aspect}`)} >
                 <div  onClick={() =>{enlarge(index)}} className={clsx(card.mainImage.aspect, "w-full h-full max-h-250 sl:max-w-auto relative overflow-hidden rounded-t-xl cursor-pointer")}>
                     <Image
                     src={card.mainImage.src}
@@ -174,7 +174,7 @@ export default function GenCards({Cards} : GenCardsProps){
                     {card.description}
                     </p>
                     {card.button.map((button, index : number) =>( // generates for each button
-                    <RoundButtonPri key={index} href={button.link} text={button.text} />
+                    <RoundButtonPri key={index} href={button.link} text={button.text} newPage={true} />
                     ))}
 
                     {card.secondaryImage.map((image, index : number) =>( // generates for each image
