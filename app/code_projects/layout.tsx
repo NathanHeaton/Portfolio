@@ -1,6 +1,6 @@
 import CodeNav from "../UI/code_nav";
 import "../globals.css";
-
+import CardTranstion from "../components/cardTransition";
 export default function CodeLayout({
     children,
   }: Readonly<{
@@ -25,6 +25,7 @@ export default function CodeLayout({
 
     <main className="w-full flex max-w-400">
     <section className="w-full flex flex-row flex-wrap">
+        {/* <CardTranstion children={children} /> */}
         {children}
     </section>
     </main>

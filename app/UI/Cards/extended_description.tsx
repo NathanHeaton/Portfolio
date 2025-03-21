@@ -3,19 +3,19 @@ import Image from "next/image"
 import RoundButtonPri from "../round_buttonPri";
 
 const DNCarousel = [
-    {src : "/img/perry gaurentees.png",alt : "list of gaurentees", width : "400", height : "300"},
-    {src : "/img/PerrysFuels.png",alt : "people that are part of the business", width : "400", height : "300"},
-    {src : "/img/kennys fuel page.png",alt : "ennys fuel page", width : "400", height : "300"},
+    {src : "/img/perry gaurentees.png",alt : "list of gaurentees", width : 400, height : 300},
+    {src : "/img/PerrysFuels.png",alt : "people that are part of the business", width : 400, height : 300},
+    {src : "/img/kennys fuel page.png",alt : "ennys fuel page", width : 400, height : 300},
 
 ]
 
 const VLECarousel = [
-    {src : "/img/persona1.png",alt : "teacher persona", width : "400", height : "300"},
-    {src : "/img/persona2.png",alt : "teacher persona", width : "400", height : "300"},
-    {src : "/img/persona3.png",alt : "teacher persona", width : "400", height : "300"},
-    {src : "/img/persona4.png",alt : "teacher persona", width : "400", height : "300"},
-    {src : "/img/persona5.png",alt : "teacher persona", width : "400", height : "300"},
-    {src : "/img/persona6.png",alt : "teacher persona", width : "400", height : "300"}
+    {src : "/img/persona1.png",alt : "teacher persona", width : 400, height : 300},
+    {src : "/img/persona2.png",alt : "teacher persona", width : 400, height : 300},
+    {src : "/img/persona3.png",alt : "teacher persona", width : 400, height : 300},
+    {src : "/img/persona4.png",alt : "teacher persona", width : 400, height : 300},
+    {src : "/img/persona5.png",alt : "teacher persona", width : 400, height : 300},
+    {src : "/img/persona6.png",alt : "teacher persona", width : 400, height : 300}
 
 
 ]
@@ -86,7 +86,7 @@ export default function ExtendedDescription({extension, VLE} : types)
                     <br /><br />
                 </article>
                 <article   className="max-w-175 flex justify-center mx-5 mb-5 md:mx-auto" >
-                <RoundButtonPri href="/documment/VLE Design Report.pdf" text="VLE Design Report.pdf" />
+                <RoundButtonPri href="/documment/VLE Design Report.pdf" text="VLE Design Report.pdf" newPage={true} />
                 </article>
             </section>
 

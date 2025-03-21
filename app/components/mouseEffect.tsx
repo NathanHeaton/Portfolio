@@ -7,12 +7,12 @@ import { useRef } from "react";
 import "../globals.css";
 
 export default function MouseEffect() {
-  const mouseRef = useRef(null);
-  const mouseTextRef = useRef(null);
+  const mouseRef = useRef<HTMLDivElement>(null);
+  const mouseTextRef = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
 
-    const customMouse = mouseRef.current;
+    const customMouse: HTMLDivElement | null = mouseRef.current;
 
     if(customMouse) customMouse.style.backgroundColor = "#69de90";
 
@@ -23,7 +23,7 @@ export default function MouseEffect() {
     let mousePos = {x:0,y:0};
     let targetPos = {x:0,y:0};
 
-    const handleMouseMove = (e) =>
+    const handleMouseMove = (e : MouseEvent) =>
     {
       targetPos = {x: e.pageX, y: e.pageY}
 
@@ -62,7 +62,7 @@ export default function MouseEffect() {
       }
     };
 
-    function lerp(start, end) {
+    function lerp(start : number, end : number) {
       return start + (end - start) * 0.10;
     }
 

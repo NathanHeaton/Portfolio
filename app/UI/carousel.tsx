@@ -3,7 +3,17 @@
 import Image from "next/image"
 import { useRef } from "react"
 
-export default function Carousel({images})
+type types = {
+    src : string;
+    alt : string;
+    width : number;
+    height : number;
+}
+type carousel = {
+    images : types[];
+}
+
+export default function Carousel({images} : carousel)
 {
     const IMAGE = useRef(null);
 
@@ -19,7 +29,7 @@ export default function Carousel({images})
     
     return(
         <>
-            {images.map((image, index) =>(
+            {images.map((image, index : number) =>(
                 <div key={index} ref={IMAGE} className="hidden">
                 <Image src={image.src}
                 alt={image.alt}

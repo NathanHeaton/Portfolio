@@ -1,7 +1,7 @@
 "use client";
 
 
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 
 export default function PageTransition({children} : {children : React.ReactNode}){
@@ -14,19 +14,27 @@ export default function PageTransition({children} : {children : React.ReactNode}
         return ("/" + array[1]);
     }
 
+    function tranistionDirection(){
+        let x = 300;
+        console.log(userPath)
+        if (userPath == "/")
+        {
+            x= -300;
+        }
+        return x;
+    }
+
     return(
-        <AnimatePresence mode="wait" initial={false}>
-         
+
             <motion.div
                 key={userPath} 
-                initial={{ opacity: 0, y: 100, x: 100 }}
-                animate={{ opacity: 1, y: 0, x: 0 }}
+                initial={{ opacity: 0, y: -200, x: tranistionDirection(), scale: 0.9 }}
+                animate={{ opacity: 1, y: 0, x: 0,scale: 1 }}
                 exit={{ opacity: 0, y:-100}}
                 transition={{ duration: 0.4 }}
             > 
             {children}
             </motion.div>
-        </AnimatePresence>
 
     );
 }
