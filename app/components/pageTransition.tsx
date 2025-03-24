@@ -1,7 +1,7 @@
 "use client";
 
 
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 
 export default function PageTransition({children} : {children : React.ReactNode}){
@@ -28,10 +28,11 @@ export default function PageTransition({children} : {children : React.ReactNode}
 
             <motion.div
                 key={userPath} 
-                initial={{ opacity: 0, y: -200, x: tranistionDirection(), scale: 0.9 }}
-                animate={{ opacity: 1, y: 0, x: 0,scale: 1 }}
+                style={{originX:0, originY:0, originZ:0}}
+                initial={{ opacity: 0, y: 100, x: 0, rotateX: -30 }}
+                animate={{ opacity: 1, y: 0, x: 0,rotateX: 0 }}
                 exit={{ opacity: 0, y:-100}}
-                transition={{ duration: 0.4 }}
+                transition={{ duration: 0.6, ease:"easeInOut" }}
             > 
             {children}
             </motion.div>

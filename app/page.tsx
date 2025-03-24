@@ -5,6 +5,7 @@ import ProjectGrid from "./UI/project_grid";
 import SquareButtons from "./UI/square_buttons";
 import RoundButtonPri from "./UI/round_buttonPri";
 import RoundButtonSec from "./UI/round_buttonSec";
+import WavingHand from "./components/wavingHand";
 //import RoundButton from "./UI/round_button";
 
 export default function Home() {
@@ -19,8 +20,8 @@ export default function Home() {
             <RoundButtonSec href="#about-me" text="About me"/>
             </div>
             <div className="mb-15 md:w-1/2 xl:w-full">
-              <p className="hover:rotate-90 !text-[1.5rem] transition-all duration-300 absolute origin-center">👋</p> 
-              <p className="!text-[1.5rem] mb-5">.... Welcome to My Portfolio, here are my main skills:</p>
+              <WavingHand />
+              <p className="!text-[1.5rem] mb-5">⠀⠀ Welcome to My Portfolio, here are my main skills:</p>
               <SquareButtons />
             </div>
             
@@ -31,8 +32,8 @@ export default function Home() {
         <section className="flex md:flex-row flex-wrap " >
           <section className="md:w-1/2 w-full max-w-1200">
             <h1>About me</h1>
-            <p className="hover:rotate-90 transition-all duration-300 absolute origin-center !text-[1.5rem]">👋</p> 
-            <p className="!text-[1.5rem]">.... Welcome to My Portfolio Explore my collection of art and programming projects, showcasing my journey and growth over the past few years.<br /><br />
+         
+            <p className="!text-[1.5rem] md:pr-10">Explore my collection of art and programming projects, showcasing my journey and growth over the past few years.<br /><br />
             I’m currently a student at SETU Carlow, pursuing a degree in Interactive Digital Art and Design. My work spans both traditional and digital art, with a recent focus on 3D modeling and digital design. Alongside my artistic skills, I’m also experienced in coding, with proficiency in languages like C++, JavaScript, and HTML. From developing interactive websites to creating efficient, user-friendly interfaces, I love combining creativity with technical expertise to solve design and programming challenges.
             <br /><br />
             Dive in to see how I blend creativity, design, and coding to bring ideas to life.</p>

@@ -39,7 +39,7 @@ interface types {id : string;
 
 export default function GenCards({Cards} : GenCardsProps){
 
-    const [open, setenlarged] = useState({});
+    const [isOpen, setopen] = useState({});
     const element = useRef(null);
 
     let prevCard : number | null = null;
@@ -149,7 +149,8 @@ export default function GenCards({Cards} : GenCardsProps){
         {
             return (
                 <motion.section 
-                    //{...()   &&{ whileHover : {scale: 1.05},  whileTap :{scale:0.95}}}
+                    whileHover ={isOpen ? {scale: 1} : {scale: 1.05} }
+                    whileTap ={{scale:0.95}}
                   key={card.id}
                    id={""+index+""}
                     ref={element}
