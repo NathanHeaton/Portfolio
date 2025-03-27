@@ -6,6 +6,7 @@ import SquareButtons from "./UI/square_buttons";
 import RoundButtonPri from "./UI/round_buttonPri";
 import RoundButtonSec from "./UI/round_buttonSec";
 import WavingHand from "./components/wavingHand";
+import HomePageArrow from "./components/homePageArrow";
 //import RoundButton from "./UI/round_button";
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
             </div>
             
           </article>
+          <HomePageArrow />
           <ProjectGrid />
         </section>
         <ToolsShowcase />

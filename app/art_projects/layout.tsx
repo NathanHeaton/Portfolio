@@ -1,5 +1,6 @@
 
 import ArtNav from "../UI/art_nav";
+import ActionLine from "../components/actionLine";
 
 export default function ArtLayout({
     children,
@@ -11,6 +12,7 @@ export default function ArtLayout({
 
 
 <section className="flex justify-center flex-wrap py-25 w-full md:max-w-200 md:w-3/5 px-8 md:px-0">
+    <ActionLine />
     <h1 className="text-l py-5">Art Portfolio</h1>
     <p>This page showcases a variety of my artistic works, ranging from digital to traditional mediums. You'll find digital pieces created with software like Photoshop, 
                 Krita, Aseprite, and Spine, alongside traditional artworks made using watercolor, acrylics, and slab pottery. I’ve also

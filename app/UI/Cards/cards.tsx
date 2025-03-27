@@ -154,7 +154,7 @@ export default function GenCards({Cards} : GenCardsProps){
                   key={card.id}
                    id={""+index+""}
                     ref={element}
-                     className={clsx(card.size, "max-xl:w-full md:aspect-auto h-auto relative flex flex-col p-3 transition-all duration-200", `${card.mainImage.aspect}`)} >
+                     className={clsx(card.size, "max-xl:w-full md:aspect-auto h-auto relative flex flex-col p-3 transition-all duration-200 snap-start", `${card.mainImage.aspect}`)} >
                 <div  onClick={() =>{enlarge(index)}} className={clsx(card.mainImage.aspect, "w-full h-full max-h-250 sl:max-w-auto relative overflow-hidden rounded-t-xl cursor-pointer")}>
                     <Image
                     src={card.mainImage.src}

@@ -3,6 +3,7 @@
 
 import { easeInOut, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 
 export default function PageTransition({children} : {children : React.ReactNode}){
     const userPath = removeExtension()
@@ -13,6 +14,13 @@ export default function PageTransition({children} : {children : React.ReactNode}
         let array = userPath.split("/");
         return ("/" + array[1]);
     }
+
+    useEffect(() => {
+        window.scrollTo(0,0);
+
+    },[userPath]);
+
+
 
     function tranistionDirection(){
         let x = 300;
@@ -28,11 +36,11 @@ export default function PageTransition({children} : {children : React.ReactNode}
 
             <motion.div
                 key={userPath} 
-                style={{originX:0, originY:0, originZ:0}}
-                initial={{ opacity: 0, y: 100, x: 0, rotateX: -30 }}
+                initial={{ opacity: 0, y: -300, x: 0, rotateX: -45 }}
                 animate={{ opacity: 1, y: 0, x: 0,rotateX: 0 }}
                 exit={{ opacity: 0, y:-100}}
                 transition={{ duration: 0.6, ease:"easeInOut" }}
+                className="origin-top"
             > 
             {children}
             </motion.div>

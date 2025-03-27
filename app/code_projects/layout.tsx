@@ -1,6 +1,8 @@
 import CodeNav from "../UI/code_nav";
 import "../globals.css";
 import CardTranstion from "../components/cardTransition";
+import ActionLine from "../components/actionLine";
+
 export default function CodeLayout({
     children,
   }: Readonly<{
@@ -10,6 +12,7 @@ export default function CodeLayout({
         
 <div className="flex flex-col flex-wrap items-center justify-items-center min-h-screen md:p-8 pb-20 gap-5 ">
 
+    <ActionLine />
 
     <section className="flex justify-center flex-wrap py-25 w-full md:max-w-200 md:w-3/5 px-8 md:px-0">
         <h1 className="text-l py-5">Programming and UX/UI portfolio</h1>
@@ -19,6 +22,7 @@ export default function CodeLayout({
                using HTML, CSS, and JavaScript. Throughout these projects, I combined coding with UX
              research and UI design to create user-friendly, accessible interfaces that enhance usability.</p>
     </section>
+
     <nav className="bg-darkgrey p-3 max-w-600 w-full flex flex-wrap">
         <CodeNav></CodeNav>
     </nav>
