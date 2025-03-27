@@ -24,7 +24,7 @@ export default function ActionLine(){
                 xmlns="http://www.w3.org/2000/svg"
                 className={clsx(pageToSmall ? `max-h-[125vh] md:left-200`: "md:left-1/6","absolute md:w-400 md:h-800 w-200 h-400  left-0 top-35 right-auto -z-1")}
                 viewBox="3231.265 3619 1317.735 2614"
-                initial={{ opacity: 0 }}
+                initial={{ opacity: .5 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.5 }}
             >
