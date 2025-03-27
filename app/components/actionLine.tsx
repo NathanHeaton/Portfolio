@@ -22,7 +22,7 @@ export default function ActionLine(){
 
             <motion.svg
                 xmlns="http://www.w3.org/2000/svg"
-                className={clsx(pageToSmall ? `max-h-[125vh] md:left-200`: "md:left-1/6","absolute md:w-400 md:h-800 w-200 h-400  left-0 top-35 right-auto -z-1")}
+                className={clsx(pageToSmall ? `max-h-[125vh] md:left-200`: "md:left-1/6","absolute md:w-400 md:h-800 w-300 h-auto  -left-125 top-35 right-auto -z-1")}
                 viewBox="3231.265 3619 1317.735 2614"
                 initial={{ opacity: .5 }}
                 animate={{ opacity: 1 }}
@@ -35,7 +35,7 @@ export default function ActionLine(){
                     strokeOpacity="1"
                     initial={{ pathLength: 0, stroke:"#0066cc" }}
                     animate={{ pathLength: 1,stroke:"#68df90" }}
-                    transition={{ duration: 5.5 , ease:"easeIn" }}
+                    transition={{ duration: 3.5 , ease:"easeIn" }}
                 />
             </motion.svg>
 
