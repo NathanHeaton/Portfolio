@@ -1,10 +1,5 @@
-"use client"
-
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-
 import Card from "./card";
-
 
 interface types {id : string;
     size : string;
@@ -34,19 +29,7 @@ interface types {id : string;
 
 
 export default function GenCards({Cards} : GenCardsProps){
-
-    let prevCard : number | null = null;
-    let timeoutId : ReturnType<typeof setTimeout> | null = null;
-
-    const useEffect = () =>{}
-
-
-    
-    window.addEventListener("scroll", () =>{
-        if (timeoutId)
-        clearTimeout(timeoutId);
-    })
-
+    useEffect(() =>{},[])// close other cards work on later
     return(
         <>
         {Cards.map((card, index: number) => (
