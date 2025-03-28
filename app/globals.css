@@ -35,6 +35,7 @@ body {
   color: var(--foreground);
   font-family: "Tilt Warp", sans-serif;
   overflow-x: hidden;
+  max-width: 100vw;
 }
 
 ::selection {

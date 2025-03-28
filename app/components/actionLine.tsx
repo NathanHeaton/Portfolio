@@ -19,10 +19,10 @@ export default function ActionLine(){
     getTotalPageHeight();
 
     return (
-
+        <div className="">
             <motion.svg
                 xmlns="http://www.w3.org/2000/svg"
-                className={clsx(pageToSmall ? `max-h-[125vh] md:left-200`: "md:left-1/6","absolute md:w-400 md:h-800 w-300 h-auto  -left-125 top-35 right-auto -z-1")}
+                className={clsx(pageToSmall ? `max-h-[125vh] md:left-200`: "md:left-1/6","absolute md:w-400 md:h-800 w-300 h-auto sm:max-w-none  -left-200 top-35 right-auto -z-1")}
                 viewBox="3231.265 3619 1317.735 2614"
                 initial={{ opacity: .5 }}
                 animate={{ opacity: 1 }}
@@ -38,7 +38,7 @@ export default function ActionLine(){
                     transition={{ duration: 3.5 , ease:"easeIn" }}
                 />
             </motion.svg>
-
+        </div>
 
     )
 }
