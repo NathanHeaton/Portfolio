@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Card from "./card";
+import { usePathname } from "next/navigation";
 
 interface types {id : number;
     size : string;
@@ -31,11 +32,21 @@ interface types {id : number;
 
 
 export default function GenCards({Cards} : GenCardsProps){
-  
+
+  const pathName = usePathname();
+
   const [activeCardId, setActiveID] = useState<number | null>(null);
 
 
-    useEffect(() =>{},[])// close other cards work on later
+    useEffect(() =>{
+      let hash : string = window.location.hash.toString();
+      if(hash != "")
+        {
+          console.log(hash +" this is the page hash")
+          setActiveID( Number(hash.replace("#","")) )
+        }
+
+    },[0])//scrolls to card if selected from another page
 
     return(
         <>

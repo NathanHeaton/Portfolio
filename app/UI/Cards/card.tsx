@@ -53,7 +53,7 @@ export default function Card({data  ,index, isOpen, setActiveID } : types){
             {
                 cardElement.scrollIntoView({ behavior: "smooth", block: "start" })
             }
-        },50)
+        },250)
     },[isOpen])
 
 
@@ -61,6 +61,7 @@ export default function Card({data  ,index, isOpen, setActiveID } : types){
      <>
     <motion.section 
     whileTap ={{scale:0.95}}
+    id={""+card.id+ ""}
     key={index}
     ref={cardRef}
     initial={{opacity:0, y:200}}
