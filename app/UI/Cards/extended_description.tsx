@@ -94,7 +94,7 @@ export default function ExtendedDescription({extension, VLE} : types)
         else
             {
             return(
-                <section className="hidden flex-col w-full">
+                <section className="flex flex-col w-full">
                         <div className="bg-darkgreen p-5 flex justify-center my-5"><h1>Research & Planing</h1></div>
                         <article   className="max-w-175 flex justify-center mx-5 mb-5 md:mx-auto" >
                             

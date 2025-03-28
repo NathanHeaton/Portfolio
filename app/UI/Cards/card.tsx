@@ -58,7 +58,7 @@ export default function Card({data  ,index, isOpen, setActiveID } : types){
 
 
     return(
-     
+     <>
     <motion.section 
     whileTap ={{scale:0.95}}
     key={index}
@@ -73,9 +73,9 @@ export default function Card({data  ,index, isOpen, setActiveID } : types){
 
     <div onClick={() =>{setActiveID(card.id)}}
      className={clsx(
-        isOpen? "md:w-1/2 w-full" : "w-full",
+        isOpen? "md:w-1/2 w-full" : "w-full rounded-t-xl",
         card.mainImage.aspect, 
-        "h-full max-h-250 sl:max-w-auto relative overflow-hidden rounded-t-xl cursor-pointer")}
+        "h-full max-h-250 sl:max-w-auto relative overflow-hidden  cursor-pointer")}
      >
         <Image
         src={card.mainImage.src}
@@ -106,15 +106,18 @@ export default function Card({data  ,index, isOpen, setActiveID } : types){
         {card.secondaryImage.map((image, index : number) =>( // generates for each image
         <CardImage key={index} src={image.src} alt={image.alt} height={image.height} width={image.width} />
         ))}
-        <ExtendedDescription extension={card.extension[0].extension}  VLE={card.extension[0].VLE}/>
     </article>
     <div className={clsx(
         isOpen? "hidden" : "block" )}>
     <ShortDescription description={card.shortDescription} tools={card.tools} />
     </div>
-    
 
     </motion.section>
+        <div className={clsx(
+            isOpen? "flex" : "hidden", "w-full bg-darkgrey p-3" )}>
+        <ExtendedDescription extension={card.extension[0].extension}  VLE={card.extension[0].VLE}/>
+        </div>
+    </>
 );
 
 }
