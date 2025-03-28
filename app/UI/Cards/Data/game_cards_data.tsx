@@ -1,5 +1,5 @@
 
-const GameCards : {id : string, size : string, title : string, subTitle : string,
+const GameCards : {id : number, size : string, title : string, subTitle : string,
     description : any ,
      button : any,
     mainImage : {src : string, alt : string, aspect: string},
@@ -10,7 +10,7 @@ const GameCards : {id : string, size : string, title : string, subTitle : string
    
    }[] = [
         {
-            id: "9",
+            id: 9,
             size: "w-1/3",
             title: "Golden-Duel",
             subTitle: "SETU Carlow",
@@ -29,7 +29,7 @@ const GameCards : {id : string, size : string, title : string, subTitle : string
             extension: [{ extension: false, VLE: false }]
         },
         {
-            id: "10",
+            id: 10,
             size: "w-2/3",
             title: "An Phiast's Destruction",
             subTitle: "SETU Carlow / Dingle",
@@ -54,7 +54,7 @@ const GameCards : {id : string, size : string, title : string, subTitle : string
             extension: [{ extension: false, VLE: false }]
         },
         {
-            id: "11",
+            id: 11,
             size: "w-2/3",
             title: "Quest of An Phiast",
             subTitle: "SETU Carlow / Dingle",
@@ -81,7 +81,7 @@ const GameCards : {id : string, size : string, title : string, subTitle : string
             extension: [{ extension: false, VLE: false }]
         },
         {
-            id: "12",
+            id: 12,
             size: "w-1/2",
             title: "Cardochism",
             subTitle: "SETU Carlow",
@@ -101,7 +101,7 @@ const GameCards : {id : string, size : string, title : string, subTitle : string
             extension: [{ extension: false, VLE: false }]
         },
         {
-            id: "13",
+            id: 13,
             size: "w-1/2",
             title: "Escape from Time",
             subTitle: "SETU Carlow",
@@ -121,7 +121,7 @@ const GameCards : {id : string, size : string, title : string, subTitle : string
             extension: [{ extension: false, VLE: false }]
         },
         {
-            id: "14",
+            id: 14,
             size: "w-2/3",
             title: "Cat and Rat",
             subTitle: "SETU Carlow",
@@ -143,7 +143,7 @@ const GameCards : {id : string, size : string, title : string, subTitle : string
             extension: [{ extension: false, VLE: false }]
         },
         {
-            id: "15",
+            id: 15,
             size: "w-1/3",
             title: "Heli-Shooter",
             subTitle: "SETU Carlow",
@@ -160,7 +160,7 @@ const GameCards : {id : string, size : string, title : string, subTitle : string
             extension: [{ extension: false, VLE: false }]
         },
         {
-            id: "16",
+            id: 16,
             size: "w-2/3",
             title: "Fish Grow",
             subTitle: "Personal",

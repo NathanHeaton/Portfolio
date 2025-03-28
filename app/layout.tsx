@@ -48,7 +48,7 @@ export default function RootLayout({
         <link rel="icon" href="/public/icons/logo.png" type="image/x-icon"/>
       <body className={`${alegreyaSerif.variable} ${tiltWarp.variable} antialiased`}>
         <MouseEffect />
-        <header className="flex justify-between align-center h-25 w-full bg-energygreen z-10 absolute" >
+        <header className="flex justify-between align-center h-20 md:h-25 w-full bg-energygreen z-10 absolute" >
           <section className="flex align-center row-auto 2xl:ml-50 ml-10">
             <div className="m-2 mt-7.5 z-1 sm:block hidden scale-80 2xl:scale-100">
               <Image src="/icons/logo.png" alt="N logo" width={113 * .9} height={118 *.9} ></Image>    

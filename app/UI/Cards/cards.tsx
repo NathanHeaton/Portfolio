@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
 import { useEffect, useRef, useState } from "react";
 import Card from "./card";
 
-interface types {id : string;
+interface types {id : number;
     size : string;
      title : string;
       subTitle : string;
@@ -31,11 +31,22 @@ interface types {id : string;
 
 
 export default function GenCards({Cards} : GenCardsProps){
+  
+  const [activeCardId, setActiveID] = useState<number | null>(null);
+
+
     useEffect(() =>{},[])// close other cards work on later
+
     return(
         <>
         {Cards.map((card, index: number) => (
-        <Card data={card} index={index} key={index} />
+        <Card
+         data={card}
+          index={index}
+           key={card.id}
+           isOpen={activeCardId == card.id }
+           setActiveID={setActiveID}
+            />
         ))}
         </>
     )

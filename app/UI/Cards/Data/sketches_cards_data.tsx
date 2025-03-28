@@ -1,5 +1,5 @@
 
-const SketchesCards : {id : string, size : string, title : string, subTitle : string,
+const SketchesCards : {id : number, size : string, title : string, subTitle : string,
     description : any ,
      button : any,
     mainImage : {src : string, alt : string, aspect: string},
@@ -10,7 +10,7 @@ const SketchesCards : {id : string, size : string, title : string, subTitle : st
    
    }[] = [
     {
-        id: "35",
+        id: 35,
         size: "w-1/3",
         title: "Action Poses",
         subTitle: "SETU Carlow",
@@ -27,7 +27,7 @@ const SketchesCards : {id : string, size : string, title : string, subTitle : st
         extension: [{ extension: false, VLE: false }]
     },
     {
-        id: "36",
+        id: 36,
         size: "w-1/3",
         title: "Male Anatomy",
         subTitle: "Personal",
@@ -42,7 +42,7 @@ const SketchesCards : {id : string, size : string, title : string, subTitle : st
         extension: [{ extension: false, VLE: false }]
     },
     {
-        id: "37",
+        id: 37,
         size: "w-1/3",
         title: "Female Anatomy",
         subTitle: "Personal",
@@ -57,7 +57,7 @@ const SketchesCards : {id : string, size : string, title : string, subTitle : st
         extension: [{ extension: false, VLE: false }]
     },
     {
-        id: "38",
+        id: 38,
         size: "w-1/3",
         title: "Animal Sketches",
         subTitle: "SETU",
@@ -72,7 +72,7 @@ const SketchesCards : {id : string, size : string, title : string, subTitle : st
         extension: [{ extension: false, VLE: false }]
     },
     {
-        id: "39",
+        id: 39,
         size: "w-1/3",
         title: "Animal Sketches",
         subTitle: "SETU",
@@ -87,7 +87,7 @@ const SketchesCards : {id : string, size : string, title : string, subTitle : st
         extension: [{ extension: false, VLE: false }]
     },
     {
-        id: "40",
+        id: 40,
         size: "w-1/3",
         title: "Animal Sketches",
         subTitle: "SETU",
@@ -102,7 +102,7 @@ const SketchesCards : {id : string, size : string, title : string, subTitle : st
         extension: [{ extension: false, VLE: false }]
     },
     {
-        id: "41",
+        id: 41,
         size: "w-1/3",
         title: "Animal Sketches",
         subTitle: "SETU",

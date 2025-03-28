@@ -1,4 +1,4 @@
-const OtherCards : {id : string, size : string, title : string, subTitle : string,
+const OtherCards : {id : number, size : string, title : string, subTitle : string,
     description : any ,
      button : any,
     mainImage : {src : string, alt : string, aspect: string},
@@ -9,7 +9,7 @@ const OtherCards : {id : string, size : string, title : string, subTitle : strin
    
    }[] = [
     {
-        id: "43",
+        id: 43,
         size: "w-1/3",
         title: "Data Self Portrait",
         subTitle: "SETU",
@@ -36,7 +36,7 @@ const OtherCards : {id : string, size : string, title : string, subTitle : strin
         extension: [{ extension: false, VLE: false }]
     },
     {
-        id: "44",
+        id: 44,
         size: "w-2/3",
         title: "To-Do App Wireframe",
         subTitle: "SETU Y2",

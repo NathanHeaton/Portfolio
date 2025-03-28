@@ -43,7 +43,7 @@ export default function MobileNav()
             animate={navState ? "open" : "closed"} 
             variants={variants}
             transition={{duration: 0.2}}
-            className="flex flex-col absolute w-full top-25 right-0 bg-darkgrey z-0 md:w-100 ">
+            className="flex flex-col absolute w-full top-20 md:top-25 right-0 bg-darkgrey z-0 md:w-100 ">
                
                     <>
                     {Links.map((link) => {

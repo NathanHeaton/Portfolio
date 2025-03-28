@@ -32,7 +32,7 @@ export default function Home() {
         </section>
         <ToolsShowcase />
         <section className="flex md:flex-row flex-wrap " >
-          <section className="md:w-1/2 w-full max-w-1200">
+          <section id="about-me" className="md:w-1/2 w-full max-w-1200">
             <h1>About me</h1>
          
             <p className="!text-[1.5rem] md:pr-10">Explore my collection of art and programming projects, showcasing my journey and growth over the past few years.<br /><br />

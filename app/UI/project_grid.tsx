@@ -22,7 +22,7 @@ export default function ProjectGrid()
 {
 
     return(
-        <section className="grid w-full h-autp p-5 gap-5 xl:w-2/3">
+        <section className="grid w-full h-autp md:p-5 gap-5 xl:w-2/3">
 
             <motion.div
             whileHover={{scale: 1.1}}

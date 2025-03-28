@@ -1,7 +1,7 @@
 
 
 
-const WebCards : {id : string, size : string, title : string, subTitle : string,
+const WebCards : {id : number, size : string, title : string, subTitle : string,
    description : any ,
     button : any,
    mainImage : {src : string, alt : string, aspect: string},
@@ -12,7 +12,7 @@ const WebCards : {id : string, size : string, title : string, subTitle : string,
   
   }[] = [
     {
-        id: "0",
+        id: 0,
         size: "w-1/3",
         // text and links
         title: "Blooming Flower Clock",
@@ -33,7 +33,7 @@ const WebCards : {id : string, size : string, title : string, subTitle : string,
 
     },
     {
-        id: "1",
+        id: 1,
         size: "w-2/3",
         // text and links
         title: "VLE (Virtual Learning Enviornment)",
@@ -51,7 +51,7 @@ const WebCards : {id : string, size : string, title : string, subTitle : string,
 
     },
     {
-        id: "2",
+        id: 2,
         size: "w-2/3",
         // text and links
         title: "Retrograde Website",
@@ -68,7 +68,7 @@ const WebCards : {id : string, size : string, title : string, subTitle : string,
 
     },
     {
-      id: "3",
+      id: 3,
       size: "w-1/3",
       // text and links
       title: "Intern Manager",
@@ -88,7 +88,7 @@ const WebCards : {id : string, size : string, title : string, subTitle : string,
 
   },
   {
-    id: "9", // Assuming this is the next ID in your sequence
+    id: 9, // Assuming this is the next ID in your sequence
     size: "w-2/3", // Assuming it's a large card based on the class "card-content-large"
     // text and links
     title: "DNOreilly's Fuels Website",
@@ -106,7 +106,7 @@ const WebCards : {id : string, size : string, title : string, subTitle : string,
     extension: [{ extension: true, VLE: false }]
   },
   {
-      id: "4",
+      id: 4,
       size: 'w-1/3',
       title: 'Portfolio Website',
       subTitle: 'SETU Carlow year 2-3',
@@ -131,7 +131,7 @@ const WebCards : {id : string, size : string, title : string, subTitle : string,
       extension: [{extension : false , VLE : false}]
     },
     {
-      id: "5",
+      id: 5,
       size: 'w-1/3',
       title: 'USAP Redesign Wireframe',
       subTitle: 'SETU Carlow',
@@ -148,7 +148,7 @@ const WebCards : {id : string, size : string, title : string, subTitle : string,
       extension: [{extension : false , VLE : false}]
     },
     {
-      id: "6",
+      id: 6,
       size: 'w-2/3',
       title: 'Riverside Take Away Website',
       subTitle: 'SETU Carlow',
@@ -165,7 +165,7 @@ const WebCards : {id : string, size : string, title : string, subTitle : string,
       extension: [{extension : false , VLE : false}]
     },
     {
-      id: "7",
+      id: 7,
       size: 'w-2/3',
       title: 'Escape from Time',
       subTitle: 'SETU Carlow',
@@ -182,7 +182,7 @@ const WebCards : {id : string, size : string, title : string, subTitle : string,
       extension: [{extension : false , VLE : false}]
     },
     {
-      id: "8",
+      id: 8,
       size: 'w-1/3',
       title: 'Band Promotion Website',
       subTitle: 'SETU Carlow',

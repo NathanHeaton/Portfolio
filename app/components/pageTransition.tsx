@@ -16,7 +16,7 @@ export default function PageTransition({children} : {children : React.ReactNode}
     }
 
     useEffect(() => {
-        window.scrollTo(0,0);
+        window.scrollTo(0,-100);
 
     },[userPath]);
 

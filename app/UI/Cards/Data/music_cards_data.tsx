@@ -1,4 +1,4 @@
-const MusicCards : {id : string, size : string, title : string, subTitle : string,
+const MusicCards : {id : number, size : string, title : string, subTitle : string,
     description : any ,
      button : any,
     mainImage : {src : string, alt : string, aspect: string},
@@ -9,7 +9,7 @@ const MusicCards : {id : string, size : string, title : string, subTitle : strin
    
    }[] = [
     {
-        id: "42",
+        id: 42,
         size: "w-1/3",
         title: "Soundcloud",
         subTitle: "Personal",

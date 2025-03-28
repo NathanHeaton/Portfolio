@@ -1,4 +1,4 @@
-const ThreeDArtCards : {id : string, size : string, title : string, subTitle : string,
+const ThreeDArtCards : {id : number, size : string, title : string, subTitle : string,
     description : any ,
      button : any,
     mainImage : {src : string, alt : string, aspect: string},
@@ -9,7 +9,7 @@ const ThreeDArtCards : {id : string, size : string, title : string, subTitle : s
    
    }[] = [
     {
-        id: "33",
+        id: 33,
         size: "w-1/2",
         title: "Blender Donut",
         subTitle: "Personal",
@@ -24,7 +24,7 @@ const ThreeDArtCards : {id : string, size : string, title : string, subTitle : s
         extension: [{ extension: false, VLE: false }]
     },
     {
-        id: "34",
+        id: 34,
         size: "w-1/2",
         title: "Blender Coffee Cup",
         subTitle: "Personal",

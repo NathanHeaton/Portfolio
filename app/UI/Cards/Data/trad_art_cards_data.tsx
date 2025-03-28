@@ -1,4 +1,4 @@
-const TradArtCards: {id : string, size : string, title : string, subTitle : string,
+const TradArtCards: {id : number, size : string, title : string, subTitle : string,
     description : [
         string,
     ] | any ,
@@ -13,7 +13,7 @@ const TradArtCards: {id : string, size : string, title : string, subTitle : stri
    
    }[] = [
     {
-        id: "24",
+        id: 24,
         size: "w-1/2",
         title: "Portrait",
         subTitle: "Personal",
@@ -26,7 +26,7 @@ const TradArtCards: {id : string, size : string, title : string, subTitle : stri
         extension: [{ extension: false, VLE: false }]
     },
     {
-        id: "25",
+        id: 25,
         size: "w-1/2",
         title: "Pencil Portrait",
         subTitle: "Personal",
@@ -41,7 +41,7 @@ const TradArtCards: {id : string, size : string, title : string, subTitle : stri
         extension: [{ extension: false, VLE: false }]
     },
     {
-        id: "26",
+        id: 26,
         size: "w-1/2",
         title: "Ceramic Piece",
         subTitle: "Leaving Cert Art",
@@ -56,7 +56,7 @@ const TradArtCards: {id : string, size : string, title : string, subTitle : stri
         extension: [{ extension: false, VLE: false }]
     },
     {
-        id: "27",
+        id: 27,
         size: "w-1/2",
         title: "Pencil Portrait",
         subTitle: "Personal",
@@ -71,7 +71,7 @@ const TradArtCards: {id : string, size : string, title : string, subTitle : stri
         extension: [{ extension: false, VLE: false }]
     },
     {
-        id: "28",
+        id: 28,
         size: "w-2/3",
         title: "Car Drawings",
         subTitle: "Personal",
@@ -89,7 +89,7 @@ const TradArtCards: {id : string, size : string, title : string, subTitle : stri
         extension: [{ extension: false, VLE: false }]
     },
     {
-        id: "29",
+        id: 29,
         size: "w-1/3",
         title: "Pencil Portraits",
         subTitle: "Personal",
@@ -106,7 +106,7 @@ const TradArtCards: {id : string, size : string, title : string, subTitle : stri
         extension: [{ extension: false, VLE: false }]
     },
     {
-        id: "30",
+        id: 30,
         size: "w-2/3",
         title: "Guitar Painting",
         subTitle: "Leaving Cert",
@@ -121,7 +121,7 @@ const TradArtCards: {id : string, size : string, title : string, subTitle : stri
         extension: [{ extension: false, VLE: false }]
     },
     {
-        id: "31",
+        id: 31,
         size: "w-1/3",
         title: "Charcoal Portrait",
         subTitle: "Personal",
@@ -136,7 +136,7 @@ const TradArtCards: {id : string, size : string, title : string, subTitle : stri
         extension: [{ extension: false, VLE: false }]
     },
     {
-        id: "32",
+        id: 32,
         size: "w-1/3",
         title: "Pencil Portrait, Arthur Morgan",
         subTitle: "Personal",

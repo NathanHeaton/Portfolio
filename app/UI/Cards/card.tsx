@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 
 interface types {
 
-data : {id : string;
+data : {id : number;
     size : string;
      title : string;
       subTitle : string;
@@ -34,13 +34,13 @@ data : {id : string;
     extension : {extension : boolean; VLE : boolean}[]
     }
 index : number;
+isOpen: boolean| null;
+setActiveID: (id: number | null) => void;
 
 };
    
 
-export default function Card({data  ,index } : types){
-
-    const [isOpen, setopen] = useState(false);
+export default function Card({data  ,index, isOpen, setActiveID } : types){
 
     const cardRef= useRef<HTMLDivElement>(null);
 
@@ -48,14 +48,13 @@ export default function Card({data  ,index } : types){
 
     useEffect(()=>{
         let cardElement : HTMLDivElement | null  = cardRef.current
+        setTimeout(()=>{
         if (isOpen && cardElement != null)
             {
                 cardElement.scrollIntoView({ behavior: "smooth", block: "start" })
             }
+        },50)
     },[isOpen])
-
-    
-
 
 
     return(
@@ -64,15 +63,15 @@ export default function Card({data  ,index } : types){
     whileTap ={{scale:0.95}}
     key={index}
     ref={cardRef}
-    initial={{ y:200}}
-    animate={{ y: 0}}
+    initial={{opacity:0, y:200}}
+    animate={{opacity:1, y: 0}}
     transition={{duration:0.3, ease:"circInOut"}}
     className={clsx(
         isOpen? "w-full bg-darkgrey md:flex-row flex-col" : card.size +" flex-col" ,
-        "max-xl:w-full md:aspect-auto h-auto relative flex p-3 transition-all duration-400 snap-start", 
+        "max-xl:w-full md:aspect-auto h-auto relative flex p-3 transition-all duration-400", 
         `${card.mainImage.aspect}`)} >
 
-    <div onClick={() =>{setopen(true)}}
+    <div onClick={() =>{setActiveID(card.id)}}
      className={clsx(
         isOpen? "md:w-1/2 w-full" : "w-full",
         card.mainImage.aspect, 
@@ -91,7 +90,7 @@ export default function Card({data  ,index } : types){
     </div>
     <button className={clsx(
         isOpen? "flex" : "hidden",
-         "absolute top-4 right-6 bg-darkgrey p-3 rounded-full border-2 border-darkgreen cursor-pointer")} onClick={() =>{setopen(false)}} >Close</button>
+         "absolute top-4 right-6 bg-darkgrey p-3 rounded-full border-2 border-darkgreen cursor-pointer")} onClick={() =>{setActiveID(null)}} >Close</button>
     <article  className={clsx(
         isOpen? "flex" : "hidden",
         "md:w-1/3 flex-col m-10")} >
@@ -107,12 +106,13 @@ export default function Card({data  ,index } : types){
         {card.secondaryImage.map((image, index : number) =>( // generates for each image
         <CardImage key={index} src={image.src} alt={image.alt} height={image.height} width={image.width} />
         ))}
+        <ExtendedDescription extension={card.extension[0].extension}  VLE={card.extension[0].VLE}/>
     </article>
     <div className={clsx(
         isOpen? "hidden" : "block" )}>
     <ShortDescription description={card.shortDescription} tools={card.tools} />
     </div>
-    <ExtendedDescription extension={card.extension[0].extension}  VLE={card.extension[0].VLE}/>
+    
 
     </motion.section>
 );

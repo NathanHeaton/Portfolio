@@ -12,7 +12,7 @@ export default function HomePageArrow(){
         viewBox="3169 752.436 618.432 271.991"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
-        className="absolute 2xl:left-1/6 md:left-20  top-1/2 w-125 h-auto -z-2"
+        className="absolute 2xl:left-1/6 md:left-20 rotate-90 md:rotate-0 md:top-1/2 w-125 h-auto -z-2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5, delay: 1.5 }}

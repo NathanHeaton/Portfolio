@@ -1,5 +1,5 @@
 
-const DigitalArtCards : {id : string, size : string, title : string, subTitle : string,
+const DigitalArtCards : {id : number, size : string, title : string, subTitle : string,
     description : any ,
      button : any,
     mainImage : {src : string, alt : string, aspect: string},
@@ -10,7 +10,7 @@ const DigitalArtCards : {id : string, size : string, title : string, subTitle : 
    
    }[] = [
         {
-            id: "17",
+            id: 17,
             size: "w-2/3",
             title: "Strows Concept Art",
             subTitle: "SETU Carlow",
@@ -28,7 +28,7 @@ const DigitalArtCards : {id : string, size : string, title : string, subTitle : 
             extension: [{ extension: false, VLE: false }]
         },
         {
-            id: "18",
+            id: 18,
             size: "w-1/3",
             title: "Photoshop Portraits",
             subTitle: "Personal",
@@ -45,7 +45,7 @@ const DigitalArtCards : {id : string, size : string, title : string, subTitle : 
             extension: [{ extension: false, VLE: false }]
         },
         {
-            id: "19",
+            id: 19,
             size: "w-1/2",
             title: "Knight Rig",
             subTitle: "SETU Carlow",
@@ -63,7 +63,7 @@ const DigitalArtCards : {id : string, size : string, title : string, subTitle : 
             extension: [{ extension: false, VLE: false }]
         },
         {
-            id: "20",
+            id: 20,
             size: "w-1/2",
             title: "Pixel Art Flowers",
             subTitle: "SETU Carlow",
@@ -78,7 +78,7 @@ const DigitalArtCards : {id : string, size : string, title : string, subTitle : 
             extension: [{ extension: false, VLE: false }]
         },
         {
-            id: "21",
+            id: 21,
             size: "w-1/2",
             title: "Cat and Rat",
             subTitle: "SETU Carlow",
@@ -98,7 +98,7 @@ const DigitalArtCards : {id : string, size : string, title : string, subTitle : 
             extension: [{ extension: false, VLE: false }]
         },
         {
-            id: "22",
+            id: 22,
             size: "w-1/3",
             title: "Heli Sprite",
             subTitle: "SETU Carlow",
@@ -113,7 +113,7 @@ const DigitalArtCards : {id : string, size : string, title : string, subTitle : 
             extension: [{ extension: false, VLE: false }]
         },
         {
-            id: "23",
+            id: 23,
             size: "w-1/3",
             title: "PRACTICAL1 Year 2",
             subTitle: "SETU Carlow",
@@ -131,7 +131,7 @@ const DigitalArtCards : {id : string, size : string, title : string, subTitle : 
             extension: [{ extension: false, VLE: false }]
         },
         {
-            id: "24",
+            id: 24,
             size: "w-1/3",
             title: "Photoshop Portraits",
             subTitle: "Personal",
