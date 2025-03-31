@@ -22,16 +22,6 @@ export default function PageTransition({children} : {children : React.ReactNode}
 
 
 
-    function tranistionDirection(){
-        let x = 300;
-        console.log(userPath)
-        if (userPath == "/")
-        {
-            x= -300;
-        }
-        return x;
-    }
-
     return(
 
             <motion.div

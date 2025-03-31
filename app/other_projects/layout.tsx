@@ -1,4 +1,5 @@
 import MiscNav from "../UI/misc_nav";
+import RoundButtonSec from "../UI/round_buttonSec";
 import ActionLine from "../components/actionLine";
 
 export default function Layout({
@@ -26,6 +27,11 @@ export default function Layout({
         {children}
     </section>
 </main>
+<section className="flex justify-center flex-wrap py-25 w-full md:max-w-200 md:w-3/5 px-8 md:px-0">
+        <h1 className="text-l py-5">Open to New Opportunities</h1>
+        <p>Feel free to reach out if you'd like to learn more about my work or discuss potential collaborations. I'm always open to new opportunities and connections!</p>
+        <RoundButtonSec text="Contact Me" href="/contact" />
+    </section>
 
 </div>
     );

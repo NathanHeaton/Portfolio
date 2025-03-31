@@ -22,8 +22,8 @@ export default function ToolsShowcase(){
             <h1 className="flex justify-center">Tools & Software</h1>
             <section className="flex flex-row flex-wrap mx-auto">
             {tools.map((tool, index : number) =>
-            <div className="">
-            <MOTIONDIV whileHover={{scale: 1.1}} key={index} className="overflow-hidden relative border-2 border-transparent flex-col min-w-30 bg-darkgrey 
+            <div key={index}>
+            <MOTIONDIV whileHover={{scale: 1.1}} className="overflow-hidden relative border-2 border-transparent flex-col min-w-30 bg-darkgrey 
             before:border-highlightblue before:border-2 before:blur-xs before:rounded-2xl before:inset-0 before:absolute
             p-3 px-5 m-3 rounded-2xl">
                 <Image src={tool.src} alt={tool.alt} width={tool.width} height={tool.height}

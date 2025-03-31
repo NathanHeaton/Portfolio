@@ -23,7 +23,6 @@ export default function MobileNav()
 
     function handleCLick(){
         setNavState(!navState);
-        console.log(navState)
     }
 
     const userPath = removeExtension()
