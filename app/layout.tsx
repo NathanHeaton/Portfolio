@@ -71,18 +71,19 @@ export default function RootLayout({
                 <div className="md:flex row-auto p-10">
                   <FooterLink />
                 </div>
-                <div className="flex row gap-5 px-10">
+                <div className="flex flex-col md:flex-row gap-5 px-10 mb-10 mt-5">
                     <Link href={"https://www.linkedin.com/in/nathan-heaton-478541300/"} target="_blank">
                       <Image src="/icons/5296501_linkedin_network_linkedin logo_icon.png" alt="LinkedIn link" width={60} height={60} />
                     </Link>
                     <Link href={"https://github.com/NathanHeaton"} target="_blank">
                         <Image src="/icons/8725846_github_alt_icon.svg" alt="github link" width={60} height={60} />
                     </Link>
-                </div>
-                <div className="flex row-auto gap-5 my-10 justify-center align-middle">
-                <Image src="/icons/logo.png" alt="N logo" width={113 * .8} height={118 *.8} />    
+                    <div className="flex row-auto gap-5 md:ml-50 align-middle">
+                <Image src="/icons/logo.png" alt="N logo" width={70} height={70} />    
                     <p className="align-middle">Made by Nathan Heaton 2024</p>
                 </div>
+                </div>
+
             </section>
         </footer>
       </body>
