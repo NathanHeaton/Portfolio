@@ -33,7 +33,7 @@ export default function ActionLine(){
                     strokeWidth="15"
                     strokeOpacity="1"
                     initial={{ pathLength: 0, stroke:"#0066cc" }}
-                    animate={{ pathLength: 1,stroke:"#68df90" }}
+                    animate={{ pathLength: 1,stroke:"#55c47a" }}
                     transition={{ duration: 3.5 , ease:"easeIn" }}
                 />
             </motion.svg>

@@ -19,13 +19,12 @@ export default function HomePageArrow(){
       >
         <motion.path
           d="M3203.000,788.363C3421.000,757.363,3380.000,1113.000,3753.432,945.238C3752.432,945.238,3688.432,934.238,3688.432,934.238L3709.432,985.238L3730.432,967.238"
-          stroke="#69de90"
           strokeWidth="14"
           strokeOpacity="1"
           strokeLinecap="round"
           fill="none"
           initial={{ pathLength: 0, stroke:"#0066cc" }}
-          animate={{ pathLength: 1,stroke:"#68df90" }}
+          animate={{ pathLength: 1,stroke:"#55c47a" }}
           transition={{ duration: 1.5,delay: 1.5, ease: "easeInOut" }}
         />
       </motion.svg>

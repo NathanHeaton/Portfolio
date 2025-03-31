@@ -1,6 +1,5 @@
 import CodeNav from "../UI/code_nav";
 import "../globals.css";
-import CardTranstion from "../components/cardTransition";
 import ActionLine from "../components/actionLine";
 import RoundButtonPri from "../UI/round_buttonPri";
 import RoundButtonSec from "../UI/round_buttonSec";

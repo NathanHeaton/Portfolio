@@ -18,7 +18,7 @@ const Links = [
 
 export default function MobileNav()
 {
-    const variants = {open: {opacity : 1, y : "0"}, closed: {opacity: 0,y : "40% "}}
+    const variants = {open: {opacity : 1, y : "0"}, closed: {opacity: 0,y : "-120% "}}
     const [navState, setNavState] = useState(false); 
 
     function handleCLick(){
@@ -42,7 +42,7 @@ export default function MobileNav()
             animate={navState ? "open" : "closed"} 
             variants={variants}
             transition={{duration: 0.2}}
-            className="flex flex-col absolute w-full top-20 md:top-25 right-0 bg-darkgrey z-0 md:w-100 ">
+            className="flex flex-col absolute w-full top-20 md:top-25 right-0 bg-darkgrey z-1 md:w-100 ">
                
                     <>
                     {Links.map((link) => {

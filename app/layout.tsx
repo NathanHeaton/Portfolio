@@ -55,10 +55,10 @@ export default function RootLayout({
             </div>    
             <h1 className="text-xl 2xl:text-[48px] my-3"> Nathan H</h1> 
            </section>    
-           <nav className="xl:hidden">
+           <nav className="xl:hidden z-0">
             <MobileNav />
             </nav>
-            <nav className="justify-end my-5 mr-10 xl:flex hidden 2xl:mr-20">
+            <nav className="justify-end my-5 mr-10 xl:flex hidden 2xl:mr-20 z-4">
               <NavLink />
             </nav>
    
